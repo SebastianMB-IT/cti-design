@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from '../src';
+import { Tab } from '../src';
 
 const meta = {
-  title: 'Button',
-  component: Button,
+  title: 'Tab',
+  component: Tab,
   argTypes: {
     onClick: { action: 'clicked' },
     enabled: {
@@ -19,10 +19,9 @@ const meta = {
 
 export default meta;
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Tab {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  title: 'Storybook Button',
-  enabled: false
+  enabled: false,
 };
