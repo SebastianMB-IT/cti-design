@@ -15,6 +15,7 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 // Input exports
 export * from './components/Input/ToggleSwitch';
 export * from './components/Input/TextInput';
+export * from './components/Input/PasswordInput';
 
 export * from './components/Button';
 export * from './components/Alert';
