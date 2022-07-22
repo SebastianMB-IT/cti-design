@@ -1,26 +1,27 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=14.0.0"
   },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build && yarn build-tailwind",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "lint-fix": "tsdx lint --fix",
+    "prepare": "tsdx build && yarn build-tailwind",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build-tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/tailwind.css --minify"
+    "build-tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/tailwind.css --minify",
+    "publish": "np"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -64,6 +65,7 @@
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "husky": "^8.0.1",
+    "np": "^7.6.2",
     "postcss": "^8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
