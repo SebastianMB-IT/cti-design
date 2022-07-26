@@ -6,6 +6,7 @@ const meta = {
   component: Tab,
   argTypes: {
     onClick: { action: 'clicked' },
+    backgroundColor: { control: 'color' },
     enabled: {
       control: {
         type: 'boolean',
@@ -19,9 +20,12 @@ const meta = {
 
 export default meta;
 
-const Template = (args) => <Tab {...args} />;
+const Template = args => <Tab {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const Section = Template.bind({});
+Section.args = {
   enabled: false,
+  section1: 'Commercials',
+  section2: 'Developers',
+  section3: 'Assistance',
 };

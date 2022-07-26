@@ -6,6 +6,7 @@ const meta = {
   component: SearchInput,
   argTypes: {
     onClick: { action: 'clicked' },
+    onChange: { action: 'changed' },
     enabled: {
       control: {
         type: 'boolean',
@@ -16,11 +17,8 @@ const meta = {
     controls: { expanded: true },
   },
 };
-
 export default meta;
-
-const Template = (args) => <SearchInput {...args} />;
-
+const Template = args => <SearchInput {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   enabled: false,

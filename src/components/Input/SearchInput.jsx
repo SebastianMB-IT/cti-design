@@ -1,6 +1,9 @@
 import React from "react";
 
 export const SearchInput = (props) => {
+    function handleChange(event) {
+        props.onChange(event.target.value);
+    }
     return (
         <div>
             <form> 
@@ -12,7 +15,7 @@ export const SearchInput = (props) => {
                         </svg>
                     </div>
                     <input type="search" id="search" className="block p-4 pl-10 text-sm
-                             text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Cerca.."/>
+                             text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Cerca.." onChange={handleChange}/>
                 </div>
             </form>
         </div>

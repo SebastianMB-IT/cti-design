@@ -6,6 +6,7 @@ const meta = {
   component: Button,
   argTypes: {
     onClick: { action: 'clicked' },
+    backgroundColor: { control: 'color' },
     enabled: {
       control: {
         type: 'boolean',
@@ -16,13 +17,11 @@ const meta = {
     controls: { expanded: true },
   },
 };
-
 export default meta;
-
-const Template = (args) => <Button {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  title: 'Storybook Button',
-  enabled: false
+const Template = args => <Button {...args} />;
+export const Call = Template.bind({});
+Call.args = {
+  enabled: false,
+  login: true,
+  label: 'Call',
 };

@@ -19,6 +19,7 @@ export * from './components/Input/ToggleSwitch';
 export * from './components/Input/SearchInput';
 
 export * from './components/Alert';
+export * from './components/Avatar';
 export * from './components/Button';
 export * from './components/CallDropdown';
 export * from './components/Checkbox';
