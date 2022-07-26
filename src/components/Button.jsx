@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 export const Button = ({ login, backgroundColor, label }) => {
-  const mode = login
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
   return (
     <button
       className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4

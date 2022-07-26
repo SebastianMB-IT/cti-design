@@ -9,5 +9,5 @@ CardSubtitle.propTypes = {
   subtitle: PropTypes.string.isRequired,
 };
 CardSubtitle.defaultProps = {
-  subtitle: "Name",
+  subtitle: 'Name',
 };
