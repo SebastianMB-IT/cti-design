@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-export const Presence = ({ presenceType, backgroundColor }) => {
+export const ButtonAvatar = ({ presenceType, backgroundColor }) => {
   switch ({ presenceType }) {
     case 'available':
       return (
@@ -46,10 +46,10 @@ export const Presence = ({ presenceType, backgroundColor }) => {
       );
   }
 };
-Presence.propTypes = {
+ButtonAvatar.propTypes = {
   presenceType: PropTypes.string,
   backgroundColor: PropTypes.string,
 };
-Presence.defaultProps = {
+ButtonAvatar.defaultProps = {
   presenceType: 'available',
 };

@@ -6,10 +6,8 @@ const meta = {
   component: Alert,
   argTypes: {
     onClick: { action: 'clicked' },
+    backgroundColor: { control: 'color' },
     enabled: {
-      control: {
-        type: 'boolean',
-      },
     },
   },
   parameters: {
@@ -21,7 +19,8 @@ export default meta;
 
 const Template = (args) => <Alert {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  enabled: false,
+export const Content = Template.bind({});
+Content.args = {
+  alertContent: "Write the content of the alert here!",
+  alertType: "Write the type of the alert here!",
 };

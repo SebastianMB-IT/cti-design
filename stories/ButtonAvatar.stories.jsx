@@ -1,8 +1,8 @@
 import React from 'react';
-import { Presence } from '../src';
+import { ButtonAvatar } from '../src';
 const meta = {
-  title: 'Presence',
-  component: Presence,
+  title: 'ButtonAvatar',
+  component: ButtonAvatar,
   argTypes: {
     onClick: { action: 'clicked' },
     backgroundColor: { control: 'color' },
@@ -17,7 +17,7 @@ const meta = {
   },
 };
 export default meta;
-const Template = args => <Presence {...args} />;
+const Template = args => <ButtonAvatar {...args} />;
 export const Available = Template.bind({});
 Available.args = {
   enabled: false,
