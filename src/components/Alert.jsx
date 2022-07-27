@@ -1,5 +1,5 @@
 /**
- * It can be used to show a message of success, warning or error.
+ * It can be used to render a message of success, warning or error.
  *
  * @param {string} alertType The alert type to render.
  * @param {string} alertContent The alert content to render.

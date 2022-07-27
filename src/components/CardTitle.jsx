@@ -1,3 +1,9 @@
+/**
+ * It can be used to render a Card title.
+ *
+ * @param {string} subtitle The content of the card title to render.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 

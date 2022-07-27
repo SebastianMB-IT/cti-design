@@ -1,3 +1,9 @@
+/**
+ * It can be used to render a Dot to represent the status.
+ * 
+ * @param {string} background Used to choose a background color.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 

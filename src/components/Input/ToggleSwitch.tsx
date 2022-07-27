@@ -1,3 +1,9 @@
+/**
+ * It can be used to render a Switch.
+ *
+ * @param {boolean} enable The status of the switch.
+ */
+
 import React from 'react';
 import { Switch } from '@headlessui/react';
 

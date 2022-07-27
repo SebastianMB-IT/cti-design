@@ -1,3 +1,10 @@
+/**
+ * It can be used to render a Segment.
+ *
+ * @param {string} segmentContent The content of the segment to render.
+ * @param {string} background Used to choose a background color.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 

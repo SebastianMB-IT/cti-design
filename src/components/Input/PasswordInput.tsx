@@ -1,3 +1,8 @@
+/**
+ * It can be used to render a Input for the Password.
+ *
+ */
+
 import React from 'react';
 
 export const PasswordInput = () => {
