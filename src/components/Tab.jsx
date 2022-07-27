@@ -28,5 +28,5 @@ Tab.propTypes = {
   section3: PropTypes.string.isRequired,
 };
 Tab.defaultProps = {
-  Section1: 'Commerciali',
+  Section1: 'Commercial',
 };

@@ -1,3 +1,10 @@
+/**
+ * It can be used to show a message of success, warning or error.
+ *
+ * @param {string} content The content to render.
+ * @param {string} backgroundColor The background color of the Card.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
