@@ -32,3 +32,4 @@ export * from './components/Segment';
 export * from './components/SquaredAvatar';
 export * from './components/StatusDot';
 export * from './components/Tab';
+export * from './components/Buttons/ButtonIcon';
