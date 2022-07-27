@@ -1,3 +1,8 @@
+/**
+ * It can be used to render a Squared Avatar.
+ *
+ */
+
 import React from 'react';
 // import Profile from '/src/Images/profilePicture.jpg';
 // import PropTypes from 'prop-types';

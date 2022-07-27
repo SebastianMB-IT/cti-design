@@ -1,3 +1,11 @@
+/**
+ * It can be used to show a Tab.
+ *
+ * @param {string} section1 Used to render the name of the first section.
+ * @param {string} section2 Used to render the name of the second section.
+ * @param {string} section3 Used to render the name of the third section.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 

@@ -1,5 +1,5 @@
 /**
- * It can be used to show a message of success, warning or error.
+ * It can be used to render a Card.
  *
  * @param {string} content The content to render.
  * @param {string} backgroundColor The background color of the Card.

@@ -1,3 +1,10 @@
+/**
+ * It can be used to render a Button with inside an icon.
+ *
+ * @param {string} presenceType The Button type to render.
+ * @param {string} backgroundColor The background color of the Button.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 export const ButtonAvatar = ({ presenceType, backgroundColor }) => {

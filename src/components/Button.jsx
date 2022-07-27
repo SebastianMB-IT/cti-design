@@ -1,5 +1,5 @@
 /**
- * It can be used to show a Button to the user.
+ * It can be used to render a Button to the user.
  *
  * @param {string} label The label to render.
  * @param {string} backgroundColor The background color of the Button.

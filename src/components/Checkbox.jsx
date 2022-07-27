@@ -1,3 +1,11 @@
+/**
+ * It can be used to render a Checkbox.
+ *
+ * @param {string} first The content of the first checkbox to render.
+ * @param {string} second The content of the second checkbox to render.
+ * @param {string} third The content of the third checkbox to render.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 export const Checkbox = ({ first, second, third }) => {

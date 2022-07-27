@@ -1,3 +1,8 @@
+/**
+ * It can be used to render a Input for the Search.
+ *
+ */
+
 import React from 'react';
 
 export const SearchInput = props => {
