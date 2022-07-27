@@ -19,13 +19,16 @@ export * from './components/Input/ToggleSwitch';
 export * from './components/Input/SearchInput';
 
 export * from './components/Alert';
-export * from './components/Avatar';
 export * from './components/Button';
+export * from './components/ButtonAvatar';
 export * from './components/CallDropdown';
+export * from './components/Card';
 export * from './components/CardTitle';
 export * from './components/CardSubtitle';
 export * from './components/Checkbox';
 export * from './components/Dropdown';
-export * from './components/ButtonAvatar';
+export * from './components/RoundedAvatar';
 export * from './components/Segment';
+export * from './components/SquaredAvatar';
+export * from './components/StatusDot';
 export * from './components/Tab';
