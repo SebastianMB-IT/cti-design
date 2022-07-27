@@ -1,3 +1,11 @@
+/**
+ * It can be used to show a message of success, warning or error.
+ *
+ * @param {string} alertType The alert type to render.
+ * @param {string} alertContent The alert content to render.
+ * @param {string} backgroundColor The background color of the alert.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 

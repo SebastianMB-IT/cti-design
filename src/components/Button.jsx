@@ -1,3 +1,11 @@
+/**
+ * It can be used to show a Button to the user.
+ *
+ * @param {string} label The label to render.
+ * @param {string} backgroundColor The background color of the Button.
+ * @param {bool} login The login state of the Button.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 export const Button = ({ login, backgroundColor, label }) => {

@@ -4,7 +4,7 @@ export const Checkbox = ({ first, second, third }) => {
   return (
     <div>
       <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">
-        Ordina per:
+        Order by:
       </h3>
       <fieldset>
         <legend class="sr-only"></legend>
