@@ -43,11 +43,11 @@
   "size-limit": [
     {
       "path": "dist/cti-design.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "100 KB"
     },
     {
       "path": "dist/cti-design.esm.js",
-      "limit": "10 KB"
+      "limit": "100 KB"
     }
   ],
   "devDependencies": {
