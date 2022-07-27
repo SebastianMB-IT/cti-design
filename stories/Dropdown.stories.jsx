@@ -1,12 +1,11 @@
 import React from 'react';
-import { Button } from '../src';
+import { Dropdown } from '../src';
 
 const meta = {
-  title: 'Button',
-  component: Button,
+  title: 'Dropdown',
+  component: Dropdown,
   argTypes: {
     onClick: { action: 'clicked' },
-    backgroundColor: { control: 'color' },
     enabled: {
       control: {
         type: 'boolean',
@@ -17,11 +16,12 @@ const meta = {
     controls: { expanded: true },
   },
 };
+
 export default meta;
-const Template = args => <Button {...args} />;
-export const Call = Template.bind({});
-Call.args = {
+
+const Template = (args) => <Dropdown {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
   enabled: false,
-  login: true,
-  label: 'Call',
 };

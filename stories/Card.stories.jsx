@@ -1,9 +1,9 @@
 import React from 'react';
-import { Alert } from '../src';
+import { Card } from '../src';
 
 const meta = {
-  title: 'Alert',
-  component: Alert,
+  title: 'Card',
+  component: Card,
   argTypes: {
     onClick: { action: 'clicked' },
     backgroundColor: { control: 'color' },
@@ -17,10 +17,9 @@ const meta = {
 
 export default meta;
 
-const Template = (args) => <Alert {...args} />;
+const Template = (args) => <Card {...args} />;
 
 export const Content = Template.bind({});
 Content.args = {
-  alertContent: "Write the content of the alert here!",
-  alertType: "Write the type of the alert here!",
+  content: "Write the content of the cards here",
 };

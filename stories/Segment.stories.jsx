@@ -6,10 +6,8 @@ const meta = {
   component: Segment,
   argTypes: {
     onClick: { action: 'clicked' },
+    backgroundColor: { control: 'color' },
     enabled: {
-      control: {
-        type: 'boolean',
-      },
     },
   },
   parameters: {
@@ -21,7 +19,7 @@ export default meta;
 
 const Template = (args) => <Segment {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  enabled: false,
+export const Content = Template.bind({});
+Content.args = {
+  segmentContent: "Write something here!",
 };

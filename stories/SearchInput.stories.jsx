@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button } from '../src';
+import { SearchInput } from '../src';
 
 const meta = {
-  title: 'Button',
-  component: Button,
+  title: 'Input/SearchInput',
+  component: SearchInput,
   argTypes: {
     onClick: { action: 'clicked' },
-    backgroundColor: { control: 'color' },
+    onChange: { action: 'changed' },
     enabled: {
       control: {
         type: 'boolean',
@@ -18,10 +18,8 @@ const meta = {
   },
 };
 export default meta;
-const Template = args => <Button {...args} />;
-export const Call = Template.bind({});
-Call.args = {
+const Template = args => <SearchInput {...args} />;
+export const Default = Template.bind({});
+Default.args = {
   enabled: false,
-  login: true,
-  label: 'Call',
 };

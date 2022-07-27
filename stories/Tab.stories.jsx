@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from '../src';
+import { Tab } from '../src';
 
 const meta = {
-  title: 'Button',
-  component: Button,
+  title: 'Tab',
+  component: Tab,
   argTypes: {
     onClick: { action: 'clicked' },
     backgroundColor: { control: 'color' },
@@ -17,11 +17,15 @@ const meta = {
     controls: { expanded: true },
   },
 };
+
 export default meta;
-const Template = args => <Button {...args} />;
-export const Call = Template.bind({});
-Call.args = {
+
+const Template = args => <Tab {...args} />;
+
+export const Section = Template.bind({});
+Section.args = {
   enabled: false,
-  login: true,
-  label: 'Call',
+  section1: 'Commercials',
+  section2: 'Developers',
+  section3: 'Assistance',
 };

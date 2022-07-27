@@ -1,11 +1,10 @@
 import React from 'react';
-import { Button } from '../src';
+import { StatusDot } from '../src';
 
 const meta = {
-  title: 'Button',
-  component: Button,
+  title: 'StatusDot',
+  component: StatusDot,
   argTypes: {
-    onClick: { action: 'clicked' },
     backgroundColor: { control: 'color' },
     enabled: {
       control: {
@@ -18,10 +17,9 @@ const meta = {
   },
 };
 export default meta;
-const Template = args => <Button {...args} />;
-export const Call = Template.bind({});
-Call.args = {
+
+const Template = args => <StatusDot {...args} />;
+export const Standard = Template.bind({});
+Standard.args = {
   enabled: false,
-  login: true,
-  label: 'Call',
 };
