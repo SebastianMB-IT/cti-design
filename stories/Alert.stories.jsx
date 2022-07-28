@@ -1,5 +1,6 @@
 import React from 'react';
 import { Alert } from '../src';
+import { HiLightningBolt } from "react-icons/hi";
 
 const meta = {
   title: 'Alert',
@@ -21,6 +22,6 @@ const Template = (args) => <Alert {...args} />;
 
 export const Content = Template.bind({});
 Content.args = {
-  alertContent: "Write the content of the alert here!",
   alertType: "Write the type of the alert here!",
+  icon: <HiLightningBolt />,
 };

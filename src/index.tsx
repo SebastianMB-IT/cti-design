@@ -20,8 +20,6 @@ export * from './components/Input/SearchInput';
 
 export * from './components/Alert';
 export * from './components/Button';
-export * from './components/ButtonAvatar';
-export * from './components/CallDropdown';
 export * from './components/Card';
 export * from './components/CardTitle';
 export * from './components/CardSubtitle';
