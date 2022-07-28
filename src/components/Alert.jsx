@@ -2,24 +2,46 @@
  * It can be used to render a message of success, warning or error.
  *
  * @param {string} alertType The alert type to render.
- * @param {string} alertContent The alert content to render.
+ * @param {string} icon The icon to render.
  * @param {string} backgroundColor The background color of the alert.
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Alert = ({ alertType, alertContent, backgroundColor }) => {
+export const Alert = ({ alertType, icon, backgroundColor }) => {
   return (
-    <div className="flex flex-wrap justify-center">
-      <div
-        className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg
-                     dark:bg-red-200 dark:text-red-800 w-40 border-4 border-red-200"
-        role="alert"
-        style={backgroundColor && { backgroundColor }}
-      >
-        <span className="font-medium">{alertType}</span> <br></br>
-        {alertContent}
+    <div
+      class="w-full text-white bg-red-500"
+      style={backgroundColor && { backgroundColor }}
+    >
+      <div class="container flex items-center justify-between px-6 py-4 mx-auto">
+        <div class="flex">
+          {
+            <svg viewBox="0 0 40 40" class="w-6 h-6 fill-current">
+              <path d="M20 3.36667C10.8167 3.36667 3.3667 10.8167 3.3667 20C3.3667 29.1833 10.8167 36.6333 20 36.6333C29.1834 36.6333 36.6334 29.1833 36.6334 20C36.6334 10.8167 29.1834 3.36667 20 3.36667ZM19.1334 33.3333V22.9H13.3334L21.6667 6.66667V17.1H27.25L19.1334 33.3333Z"></path>
+            </svg>
+          }
+
+          <p class="mx-3">{alertType}</p>
+        </div>
+
+        <button class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none">
+          <svg
+            class="w-5 h-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 18L18 6M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );
@@ -27,10 +49,9 @@ export const Alert = ({ alertType, alertContent, backgroundColor }) => {
 
 Alert.propTypes = {
   alertType: PropTypes.string.isRequired,
-  alertContent: PropTypes.string.isRequired,
+  icon: PropTypes.element,
   backgroundColor: PropTypes.string,
 };
 Alert.defaultProps = {
   alertType: 'Here will go all the necessary for the alert type',
-  alertContent: 'Here will go all the information about the error',
 };

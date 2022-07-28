@@ -1,11 +1,10 @@
 import React from 'react';
-import { CallDropdown } from '../src';
+import { Image } from '../src';
 
 const meta = {
-  title: 'CallDropdown',
-  component: CallDropdown,
+  title: 'Image',
+  component: Image,
   argTypes: {
-    onClick: { action: 'clicked' },
     enabled: {
       control: {
         type: 'boolean',
@@ -16,13 +15,10 @@ const meta = {
     controls: { expanded: true },
   },
 };
-
 export default meta;
 
-const Template = (args) => <CallDropdown {...args} />;
-
+const Template = args => <Image {...args} />;
 export const Default = Template.bind({});
 Default.args = {
-  title: 'Storybook CallDropdown',
-  enabled: false
+  enabled: false,
 };
