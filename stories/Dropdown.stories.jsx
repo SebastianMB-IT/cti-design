@@ -1,5 +1,6 @@
 import React from 'react';
 import { Dropdown } from '../src';
+import { HiDotsVertical } from "react-icons/hi";
 
 const meta = {
   title: 'Dropdown',
@@ -23,5 +24,9 @@ const Template = (args) => <Dropdown {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  enabled: false,
+  option1: 'Option 1',
+  option2: 'Option 2',
+  option3: 'Option 3',
+  option4: 'Option 4',
+  icon: <HiDotsVertical />,
 };
