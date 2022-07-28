@@ -1,10 +1,12 @@
 import React from 'react';
-import { Image } from '../src';
+import { SearchInput } from './../../../src';
 
 const meta = {
-  title: 'Image',
-  component: Image,
+  title: 'Components/Atoms/Input/SearchInput',
+  component: SearchInput,
   argTypes: {
+    onClick: { action: 'clicked' },
+    onChange: { action: 'changed' },
     enabled: {
       control: {
         type: 'boolean',
@@ -16,8 +18,7 @@ const meta = {
   },
 };
 export default meta;
-
-const Template = args => <Image {...args} />;
+const Template = args => <SearchInput {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   enabled: false,

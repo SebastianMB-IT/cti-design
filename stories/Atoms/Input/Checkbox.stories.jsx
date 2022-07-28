@@ -1,7 +1,7 @@
 import React from 'react';
-import { Checkbox } from '../src';
+import { Checkbox } from './../../../src';
 const meta = {
-  title: 'Checkbox',
+  title: 'Components/Atoms/Input/Checkbox',
   component: Checkbox,
   argTypes: {
     onClick: { action: 'clicked' },

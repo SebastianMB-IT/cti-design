@@ -1,8 +1,8 @@
 import React from 'react';
-import { CardSubtitle } from '../src';
+import { CardSubtitle } from './../../src';
 
 const meta = {
-  title: 'CardSubtitle',
+  title: 'Components/Atoms/CardSubtitle',
   component: CardSubtitle,
   argTypes: {
     enabled: {

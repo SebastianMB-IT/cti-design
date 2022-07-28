@@ -1,9 +1,10 @@
 import React from 'react';
-import { Card } from '../src';
+import { Alert } from './../../src';
+import { HiLightningBolt } from "react-icons/hi";
 
 const meta = {
-  title: 'Card',
-  component: Card,
+  title: 'Components/Atoms/Alert',
+  component: Alert,
   argTypes: {
     onClick: { action: 'clicked' },
     backgroundColor: { control: 'color' },
@@ -17,9 +18,10 @@ const meta = {
 
 export default meta;
 
-const Template = (args) => <Card {...args} />;
+const Template = (args) => <Alert {...args} />;
 
 export const Content = Template.bind({});
 Content.args = {
-  content: "Write the content of the cards here",
+  alertType: "Write the type of the alert here!",
+  icon: <HiLightningBolt />,
 };

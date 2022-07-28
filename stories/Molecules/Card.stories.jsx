@@ -1,9 +1,9 @@
 import React from 'react';
-import { Segment } from '../src';
+import { Card } from './../../src';
 
 const meta = {
-  title: 'Segment',
-  component: Segment,
+  title: 'Components/Molecules/Card',
+  component: Card,
   argTypes: {
     onClick: { action: 'clicked' },
     backgroundColor: { control: 'color' },
@@ -17,9 +17,9 @@ const meta = {
 
 export default meta;
 
-const Template = (args) => <Segment {...args} />;
+const Template = (args) => <Card {...args} />;
 
 export const Content = Template.bind({});
 Content.args = {
-  segmentContent: "Write something here!",
+  content: "Write the content of the cards here",
 };

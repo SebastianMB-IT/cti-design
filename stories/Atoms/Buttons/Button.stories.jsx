@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button } from '../src';
+import { Button } from './../../../src';
 
 const meta = {
-  title: 'Button',
+  title: 'Components/Atoms/Buttons/Button',
   component: Button,
   argTypes: {
     onClick: { action: 'clicked' },
@@ -17,8 +17,11 @@ const meta = {
     controls: { expanded: true },
   },
 };
+
 export default meta;
+
 const Template = args => <Button {...args} />;
+
 export const Call = Template.bind({});
 Call.args = {
   enabled: false,

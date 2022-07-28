@@ -1,10 +1,9 @@
 import React from 'react';
-import { Alert } from '../src';
-import { HiLightningBolt } from "react-icons/hi";
+import { Segment } from './../../src';
 
 const meta = {
-  title: 'Alert',
-  component: Alert,
+  title: 'Components/Atoms/Segment',
+  component: Segment,
   argTypes: {
     onClick: { action: 'clicked' },
     backgroundColor: { control: 'color' },
@@ -18,10 +17,9 @@ const meta = {
 
 export default meta;
 
-const Template = (args) => <Alert {...args} />;
+const Template = (args) => <Segment {...args} />;
 
 export const Content = Template.bind({});
 Content.args = {
-  alertType: "Write the type of the alert here!",
-  icon: <HiLightningBolt />,
+  segmentContent: "Write something here!",
 };

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Tab } from '../src';
+import { Tab } from './../../src';
 
 const meta = {
-  title: 'Tab',
+  title: 'Components/Atoms/Tab',
   component: Tab,
   argTypes: {
     onClick: { action: 'clicked' },

@@ -1,11 +1,10 @@
 import React from 'react';
-import { StatusDot } from '../src';
+import { RoundedAvatar } from './../../src';
 
 const meta = {
-  title: 'StatusDot',
-  component: StatusDot,
+  title: 'Components/Atoms/RoundedAvatar',
+  component: RoundedAvatar,
   argTypes: {
-    backgroundColor: { control: 'color' },
     enabled: {
       control: {
         type: 'boolean',
@@ -18,8 +17,8 @@ const meta = {
 };
 export default meta;
 
-const Template = args => <StatusDot {...args} />;
-export const Standard = Template.bind({});
-Standard.args = {
+const Template = args => <RoundedAvatar {...args} />;
+export const Profile = Template.bind({});
+Profile.args = {
   enabled: false,
 };

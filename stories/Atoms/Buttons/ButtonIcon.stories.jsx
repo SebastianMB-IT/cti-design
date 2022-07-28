@@ -1,9 +1,9 @@
 import React from 'react';
-import { ButtonIcon } from '../src';
+import { ButtonIcon } from './../../../src';
 import { HiRefresh } from "react-icons/hi";
 
 const meta = {
-  title: 'ButtonIcon',
+  title: 'Components/Atoms/Buttons/ButtonIcon',
   component: ButtonIcon,
   argTypes: {
   },

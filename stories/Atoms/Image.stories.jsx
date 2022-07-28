@@ -1,9 +1,9 @@
 import React from 'react';
-import { SquaredAvatar } from '../src';
+import { Image } from './../../src';
 
 const meta = {
-  title: 'SquaredAvatar',
-  component: SquaredAvatar,
+  title: 'Components/Atoms/Image',
+  component: Image,
   argTypes: {
     enabled: {
       control: {
@@ -17,8 +17,8 @@ const meta = {
 };
 export default meta;
 
-const Template = args => <SquaredAvatar {...args} />;
-export const Profile = Template.bind({});
-Profile.args = {
+const Template = args => <Image {...args} />;
+export const Default = Template.bind({});
+Default.args = {
   enabled: false,
 };

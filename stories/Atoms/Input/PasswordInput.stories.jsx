@@ -1,8 +1,8 @@
 import React from 'react';
-import { PasswordInput } from '../src';
+import { PasswordInput } from './../../../src';
 
 const meta = {
-  title: 'Input/PasswordInput',
+  title: 'Components/Atoms/Input/PasswordInput',
   component: PasswordInput,
   argTypes: {
     onClick: { action: 'clicked' },

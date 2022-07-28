@@ -1,8 +1,8 @@
 import React from 'react';
-import { CardTitle } from '../src';
+import { CardTitle } from './../../src';
 
 const meta = {
-  title: 'CardTitle',
+  title: 'Components/Atoms/CardTitle',
   component: CardTitle,
   argTypes: {
     enabled: {
