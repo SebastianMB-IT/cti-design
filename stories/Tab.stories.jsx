@@ -6,7 +6,6 @@ const meta = {
   component: Tab,
   argTypes: {
     onClick: { action: 'clicked' },
-    backgroundColor: { control: 'color' },
     enabled: {
       control: {
         type: 'boolean',
@@ -28,4 +27,7 @@ Section.args = {
   section1: 'Commercials',
   section2: 'Developers',
   section3: 'Assistance',
+  content1: 'Lorem ipsum dolor sit amet',
+  content2: 'Lorem ipsum dolor sit amet',
+  content3: 'Lorem ipsum dolor sit amet',
 };

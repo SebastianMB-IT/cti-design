@@ -1,6 +1,6 @@
 /**
  * It can be used to render a Dropdown menu.
- * 
+ *
  */
 import React from 'react';
 

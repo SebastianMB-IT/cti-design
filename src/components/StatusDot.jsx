@@ -1,6 +1,6 @@
 /**
  * It can be used to render a Dot to represent the status.
- * 
+ *
  * @param {string} background Used to choose a background color.
  */
 
