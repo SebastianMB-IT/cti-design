@@ -27,6 +27,7 @@ export * from './components/CardTitle';
 export * from './components/CardSubtitle';
 export * from './components/Checkbox';
 export * from './components/Dropdown';
+export * from './components/Image';
 export * from './components/RoundedAvatar';
 export * from './components/Segment';
 export * from './components/SquaredAvatar';
