@@ -1,26 +1,35 @@
-export * from './components/Atoms/Input/TextInput';
-export * from './components/Atoms/Input/PasswordInput';
-export * from './components/Atoms/Input/ToggleSwitch';
-export * from './components/Atoms/Input/SearchInput';
-export * from './components/Atoms/Input/UsernameInput';
+export * from './components/Input/TextInput';
+export * from './components/Input/PasswordInput';
+export * from './components/Input/ToggleSwitch';
+export * from './components/Input/SearchInput';
+export * from './components/Input/UsernameInput';
 
-export * from './components/Atoms/Alert';
-export * from './components/Atoms/Button';
-export * from './components/Atoms/Card';
-export * from './components/Atoms/CardTitle';
-export * from './components/Atoms/CardSubtitle';
-export * from './components/Atoms/Checkbox';
-export * from './components/Atoms/Dropdown';
-export * from './components/Atoms/Image';
-export * from './components/Atoms/RoundedAvatar';
-export * from './components/Atoms/Segment';
-export * from './components/Atoms/SquaredAvatar';
-export * from './components/Atoms/StatusDot';
-export * from './components/Atoms/Tab';
-export * from './components/Atoms/Buttons/ButtonIcon';
-export * from './components/Atoms/Buttons/LoginButton';
+export * from './components/Alert/Alert';
 
-export * from './components/Molecules/LoginForm';
-export * from './components/Molecules/LoginHeader';
+export * from './components/Button/Button';
+export * from './components/Button/ButtonIcon';
+export * from './components/Button/LoginButton';
 
-export * from './components/Organisms/LoginSection';
+export * from './components/Card/Card';
+export * from './components/Card/CardTitle';
+export * from './components/Card/CardSubtitle';
+
+export * from './components/Checkbox/Checkbox';
+
+export * from './components/Dropdown/Dropdown';
+
+export * from './components/Image/Image';
+
+export * from './components/Avatar/RoundedAvatar';
+export * from './components/Avatar/SquaredAvatar';
+
+export * from './components/Segment/Segment';
+
+export * from './components/Status/StatusDot';
+
+export * from './components/Tab/Tab';
+
+export * from './components/Form/LoginForm';
+export * from './components/Form/LoginHeader';
+
+export * from './templates/Login/LoginSection';
