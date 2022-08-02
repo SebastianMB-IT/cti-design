@@ -1,19 +1,38 @@
 /**
  * It can be used to render a Input for the Username.
  *
+ * @param {string} title The title to render.
+ * @param {string} subtitle The subtitle to render.
+ * @param {string} logoUrl The URL of the logo.
+ * @param {string} withLogo The value that manages the visibility of the logo.
  */
 
 import React from 'react';
 
-export const LoginHeader = () => {
-  return (
-    <>
-      <a href="./index.html" className="text-blue-600 text-medium">
-        nethcti.logo
+type LoginHeaderProps = {
+  title?: string;
+  subtitle?: string;
+  logoUrl?: string;
+  withLogo?: boolean;
+};
+
+export const LoginHeader = ({
+  title,
+  subtitle,
+  logoUrl,
+  withLogo,
+}: LoginHeaderProps): JSX.Element => {
+  return logoUrl && withLogo ? (
+    <div className="mb-10">
+      <a href="#" className="text-blue-600 text-medium">
+        <img src={logoUrl} />
       </a>
-      <h2 className="mt-6 text-4xl font-extrabold text-neutral-600">Login.</h2>
+    </div>
+  ) : (
+    <>
+      <h2 className="text-4xl font-extrabold text-neutral-600">{title}</h2>
       <div className="mt-4 text-base text-gray-500">
-        <p>Esegui il login con il tuo account.</p>
+        <p>{subtitle}</p>
       </div>
     </>
   );
