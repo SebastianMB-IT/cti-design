@@ -24,7 +24,7 @@ export const LoginHeader = ({
 }: LoginHeaderProps): JSX.Element => {
   return logoUrl && withLogo ? (
     <div className="mb-10">
-      <a href="#" className="text-blue-600 text-medium">
+      <a href="#" className="flex justify-center text-blue-600 text-medium">
         <img src={logoUrl} />
       </a>
     </div>

@@ -43,7 +43,7 @@ Default.args = {
 export const WithLogo = Template.bind({});
 WithLogo.args = {
   ...Default.args,
-  withLabels: false,
+  withLabels: true,
   withLogo: true
 };
 

@@ -26,6 +26,8 @@ const Template = (args) => <Alert {...args} />;
 
 export const Error = Template.bind({});
 Error.args = {
+  alertTitle: "Error",
+  alertType: "Something thrown an error!",
   color: "red",
   backgroundColor: "red",
   icon: <HiLightningBolt />,
