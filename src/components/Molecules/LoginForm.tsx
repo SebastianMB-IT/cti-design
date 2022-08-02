@@ -9,9 +9,9 @@
  */
 
 import React from 'react';
-import { UsernameInput } from '../Input/UsernameInput';
-import { PasswordInput } from '../Input/PasswordInput';
-import { LoginButton } from '../Buttons/LoginButton';
+import { UsernameInput } from '../Atoms/Input/UsernameInput';
+import { PasswordInput } from '../Atoms/Input/PasswordInput';
+import { LoginButton } from '../Atoms/Buttons/LoginButton';
 
 type LoginFormProps = {
   userPlaceholder?: string;
