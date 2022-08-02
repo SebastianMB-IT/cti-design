@@ -18,13 +18,12 @@ export const Dropdown = ({ option1, option2, option3, option4, icon }) => {
   };
 
   return (
-    <div>
-      <div>
+      <div className="relative inline-block">
         <button
           onClick={handleClick}
           id="dropdownMenuIconButton"
           data-dropdown-toggle="dropdownDots"
-          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          class="relative z-10 block p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
           type="button"
         >
           {icon}
@@ -36,22 +35,22 @@ export const Dropdown = ({ option1, option2, option3, option4, icon }) => {
               aria-labelledby="dropdownDefault"
             >
               <li>
-                <a className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                <a className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
                   {option1}
                 </a>
               </li>
               <li>
-                <a className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                <a className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
                   {option2}
                 </a>
               </li>
               <li>
-                <a className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                <a className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
                   {option3}
                 </a>
               </li>
               <li>
-                <a className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                <a className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
                   {option4}
                 </a>
               </li>
@@ -59,7 +58,6 @@ export const Dropdown = ({ option1, option2, option3, option4, icon }) => {
           </div>
         )}
       </div>
-    </div>
   );
 };
 
