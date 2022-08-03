@@ -3,6 +3,7 @@ import { Alert } from '../..';
 import { HiLightningBolt } from 'react-icons/hi';
 import { HiCheck } from 'react-icons/hi';
 import { VscInfo } from 'react-icons/vsc';
+import {FiAlertTriangle} from "react-icons/fi";
 
 const meta = {
   title: 'Components/Alert',
@@ -45,7 +46,7 @@ export const warning = Template.bind({});
 warning.args = {
   alertTitle: 'Warning',
   alertType: 'Something maybe wrong!',
-  icon: <VscInfo />,
+  icon: <FiAlertTriangle />,
   color: '#ffc107',
   backgroundColor: '#ffc107',
 };
