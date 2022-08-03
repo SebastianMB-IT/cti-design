@@ -1,33 +1,21 @@
 import React from 'react';
-import { Tab } from '../..';
+import { Tabs } from '../..';
 
 const meta = {
-  title: 'Components/Tab',
-  component: Tab,
-  argTypes: {
-    onClick: { action: 'clicked' },
-    enabled: {
-      control: {
-        type: 'boolean',
-      },
-    },
-  },
-  parameters: {
-    controls: { expanded: true },
-  },
+  title: 'Components/Tabs',
+  component: Tabs,
 };
 
 export default meta;
 
-const Template = args => <Tab {...args} />;
-
+const Template = args => <Tabs {...args} />;
 export const Section = Template.bind({});
 Section.args = {
   enabled: false,
-  section1: 'Commercials',
-  section2: 'Developers',
-  section3: 'Assistance',
-  content1: 'Lorem ipsum dolor sit amet',
-  content2: 'Lorem ipsum dolor sit amet',
-  content3: 'Lorem ipsum dolor sit amet',
+  section1: 'Tab 1',
+  section2: 'Tab 2',
+  section3: 'Tab 3',
+  content1: 'Tab 1',
+  content2: 'Tab 2',
+  content3: 'Tab 3',
 };
