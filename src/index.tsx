@@ -20,10 +20,11 @@ export * from './components/Dropdown/Dropdown';
 
 export * from './components/Image/Image';
 
-export * from './components/Avatar/RoundedAvatar';
-export * from './components/Avatar/SquaredAvatar';
+export * from './components/Avatar/Avatar';
 
 export * from './components/Segment/Segment';
+
+export * from './components/Spinner/Spinner';
 
 export * from './components/Status/StatusDot';
 
