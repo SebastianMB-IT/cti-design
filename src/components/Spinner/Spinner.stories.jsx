@@ -1,6 +1,6 @@
 import React from 'react';
 import { Spinner } from '../..';
-import { VscLoading } from 'react-icons/vsc';
+import { ImSpinner2 } from 'react-icons/im';
 
 const meta = {
   title: 'Components/Spinner',
@@ -24,5 +24,5 @@ const Template = args => <Spinner {...args} />;
 
 export const Loading = Template.bind({});
 Loading.args = {
-  icon: <VscLoading />,
+  icon: <ImSpinner2 />,
 };
