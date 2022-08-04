@@ -22,6 +22,8 @@ export * from './components/Image/Image';
 
 export * from './components/Avatar/Avatar';
 
+export * from './components/Progress/Progress';
+
 export * from './components/Segment/Segment';
 
 export * from './components/Spinner/Spinner';
@@ -29,6 +31,10 @@ export * from './components/Spinner/Spinner';
 export * from './components/Status/StatusDot';
 
 export * from './components/Tab/Tab';
+
+export * from './components/Table/Table';
+
+export * from './components/Toast/Toast';
 
 export * from './components/Form/LoginForm';
 export * from './components/Form/LoginHeader';
