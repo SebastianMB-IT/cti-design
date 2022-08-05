@@ -26,6 +26,8 @@ export * from './components/Badge/Badge';
 
 export * from './components/ListGroup/ListGroup';
 
+export * from './components/Pagination/Pagination';
+
 export * from './components/Progress/Progress';
 
 export * from './components/Segment/Segment';
