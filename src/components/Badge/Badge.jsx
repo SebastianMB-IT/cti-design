@@ -29,7 +29,7 @@ export const Badge = ({
     <div>
       {isLarge && (
         <span
-          class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
+          className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
           style={color && { color }}
         >
           {badgeMessage}
@@ -37,7 +37,7 @@ export const Badge = ({
       )}
       {isDefault && (
         <span
-          class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
+          className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
           style={color && { color }}
         >
           {badgeMessage}
@@ -45,12 +45,12 @@ export const Badge = ({
       )}
       {isIcon && (
         <span
-          class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-300"
+          className="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-300"
           style={color && { color }}
         >
           <span
             aria-hidden="true"
-            class="mr-1 w-3 h-3"
+            className="mr-1 w-3 h-3"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -62,11 +62,11 @@ export const Badge = ({
       {isNotification && (
         <button
           type="button"
-          class="inline-flex relative items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="inline-flex relative items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           style={backgroundColor && { backgroundColor }}
         >
           <svg
-            class="w-6 h-6"
+            className="w-6 h-6"
             aria-hidden="true"
             fill="currentColor"
             viewBox="0 0 20 20"
@@ -74,7 +74,7 @@ export const Badge = ({
             {icon}
           </svg>
           <div
-            class="inline-flex absolute -top-2 -right-2 justify-center items-center w-6 h-6 text-xs font-bold text-white bg-red-500 rounded-full border-2 border-white dark:border-gray-900"
+            className="inline-flex absolute -top-2 -right-2 justify-center items-center w-6 h-6 text-xs font-bold text-white bg-red-500 rounded-full border-2 border-white dark:border-gray-900"
             style={color && { color }}
           >
             {badgeMessage}
@@ -82,10 +82,10 @@ export const Badge = ({
         </button>
       )}
       {isOnlyIcon && (
-        <span class="bg-gray-100 text-gray-800 text-sm font-semibold inline-flex items-center p-1.5 rounded-full mr-2 dark:bg-gray-700 dark:text-gray-300" style={backgroundColor && {backgroundColor}}>
+        <span className="bg-gray-100 text-gray-800 text-sm font-semibold inline-flex items-center p-1.5 rounded-full mr-2 dark:bg-gray-700 dark:text-gray-300" style={backgroundColor && {backgroundColor}}>
           <svg
             aria-hidden="true"
-            class="w-3.5 h-3.5"
+            className="w-3.5 h-3.5"
             fill="currentColor"
             viewBox="0 -1.5 18 20"
           >
