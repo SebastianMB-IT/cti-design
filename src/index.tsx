@@ -22,6 +22,8 @@ export * from './components/Image/Image';
 
 export * from './components/Avatar/Avatar';
 
+export * from './components/Badge/Badge';
+
 export * from './components/Progress/Progress';
 
 export * from './components/Segment/Segment';
