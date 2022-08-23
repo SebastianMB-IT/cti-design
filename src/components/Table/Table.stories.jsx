@@ -35,12 +35,12 @@ Standard.args = {
     {
       column1: 'Column 1',
       column2: 'Column 2',
-      column3: 'Column 3'
+      column3: 'Column 3',
     },
     {
       column1: 'Column 1',
       column2: 'Column 2',
-      column3: 'Column 3'
+      column3: 'Column 3',
     },
   ],
 };

@@ -41,6 +41,7 @@ export * from './components/Tab/Tab';
 export * from './components/Table/Table';
 
 export * from './components/Toast/Toast';
+export * from './components/Toast/AlternativeToast';
 
 export * from './components/Form/LoginForm';
 export * from './components/Form/LoginHeader';

@@ -9,7 +9,7 @@ import React from 'react';
 // import Profile from '/src/Images/profilePicture.jpg';
 import PropTypes from 'prop-types';
 
-export const Avatar = ({isRounded, isSquared}) => {
+export const Avatar = ({ isRounded, isSquared }) => {
   return (
     <div>
       {isRounded && (

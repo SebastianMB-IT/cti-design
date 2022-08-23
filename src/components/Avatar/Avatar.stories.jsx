@@ -5,8 +5,7 @@ const meta = {
   title: 'Components/Avatar',
   component: Avatar,
   argTypes: {
-    enabled: {
-    },
+    enabled: {},
   },
   parameters: {
     controls: { expanded: true },

@@ -8,9 +8,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Spinner = ({ icon, color}) => {
+export const Spinner = ({ icon, color }) => {
   return (
-    <svg class="animate-spin h-4 w-4" style={color && {color}}>
+    <svg class="animate-spin h-4 w-4" style={color && { color }}>
       {icon}
     </svg>
   );

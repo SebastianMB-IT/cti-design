@@ -102,8 +102,8 @@ export const ListGroup = ({
             </svg>
             {elementList1}
           </button>
-          <button              xmlns="http://www.w3.org/2000/svg"
-
+          <button
+            xmlns="http://www.w3.org/2000/svg"
             type="button"
             className="inline-flex relative items-center py-2 px-4 w-full text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
           >
@@ -128,7 +128,7 @@ export const ListGroup = ({
               fill="currentColor"
               viewBox="0 -2 20 20"
             >
-                {iconElementList3}
+              {iconElementList3}
             </svg>
             {elementList3}
           </button>

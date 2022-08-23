@@ -1,29 +1,13 @@
 import React from 'react';
 import { Alert } from '../..';
-import { HiLightningBolt } from 'react-icons/hi';
-import { HiCheck } from 'react-icons/hi';
-import { VscInfo } from 'react-icons/vsc';
-import {FiAlertTriangle} from "react-icons/fi";
-import {IoMdClose} from "react-icons/io";
+import { HiInformationCircle } from 'react-icons/hi';
+import { AiFillEye } from 'react-icons/ai';
 
 const meta = {
   title: 'Components/Alert',
   component: Alert,
   argTypes: {
     onClick: { action: 'clicked' },
-    color: {
-      control: {
-        type: 'color',
-        presetColors: ['red', 'green', 'yellow', 'blue'],
-      },
-    },
-    backgroundColor: {
-      control: {
-        type: 'color',
-        presetColors: ['red', 'green', 'yellow', 'blue'],
-      },
-    },
-    enabled: {},
   },
   parameters: {
     controls: { expanded: true },
@@ -34,53 +18,33 @@ export default meta;
 
 const Template = args => <Alert {...args} />;
 
-export const Error = Template.bind({});
-Error.args = {
-  alertTitle: 'Error',
-  alertType: 'Something thrown an error!',
+export const Action = Template.bind({});
+Action.args = {
+  alertTitle: 'This is a info alert',
+  alertType: 'More info about this info danger goes here!',
   color: 'red',
   backgroundColor: 'red',
-  icon: <HiLightningBolt />,
-  isClosable: false,
+  icon: <HiInformationCircle />,
+  iconButton: <AiFillEye />,
+  isAction: true,
+  isBorder: false,
+  button1Title: 'View more',
+  button2Title: 'Dismiss',
 };
 
-export const warning = Template.bind({});
-warning.args = {
-  alertTitle: 'Warning',
-  alertType: 'Something maybe wrong!',
-  icon: <FiAlertTriangle />,
-  color: '#ffc107',
-  backgroundColor: '#ffc107',
-  isClosable: false,
+export const Border = Template.bind({});
+Border.args = {
+  alertType: 'A simple info alert',
+  icon: <HiInformationCircle />,
+  isAction: false,
+  isBorder: true,
 };
 
-export const success = Template.bind({});
-success.args = {
-  alertTitle: 'Success',
-  alertType: 'Something went Ok!',
-  color: '#28a745',
-  backgroundColor: '#28a745',
-  icon: <HiCheck />,
-  isClosable: false,
-};
-
-export const info = Template.bind({});
-info.args = {
-  alertTitle: 'Information',
-  alertType: 'Something to know!',
-  icon: <VscInfo />,
-  color: '#17a2b8',
-  backgroundColor: '#17a2b8',
-  isClosable: false,
-};
-
-export const action = Template.bind({});
-action.args = {
-  alertTitle: 'Information',
-  alertType: 'Something to know!',
-  icon: <VscInfo />,
-  color: '#17a2b8',
-  backgroundColor: '#17a2b8',
-  isClosable: true,
-  iconClose: <IoMdClose />,
+export const Simple = Template.bind({});
+Simple.args = {
+  alertType: 'A simple info alert',
+  icon: <HiInformationCircle />,
+  isAction: false,
+  isBorder: false,
+  isSimple: true,
 };
