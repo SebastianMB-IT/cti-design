@@ -10,7 +10,17 @@ const meta = {
     color: {
       control: {
         type: 'color',
-        presetColors: ['red', 'green', 'yellow', 'blue', 'white', 'orange', 'pink', 'purple', 'gray'],
+        presetColors: [
+          'red',
+          'green',
+          'yellow',
+          'blue',
+          'white',
+          'orange',
+          'pink',
+          'purple',
+          'gray',
+        ],
       },
     },
   },

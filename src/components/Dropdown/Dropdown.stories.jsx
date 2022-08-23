@@ -21,7 +21,7 @@ const meta = {
 
 export default meta;
 
-const Template = (args) => <Dropdown {...args} />;
+const Template = args => <Dropdown {...args} />;
 
 export const Text = Template.bind({});
 Text.args = {

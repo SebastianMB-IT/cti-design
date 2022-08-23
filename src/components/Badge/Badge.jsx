@@ -82,7 +82,10 @@ export const Badge = ({
         </button>
       )}
       {isOnlyIcon && (
-        <span className="bg-gray-100 text-gray-800 text-sm font-semibold inline-flex items-center p-1.5 rounded-full mr-2 dark:bg-gray-700 dark:text-gray-300" style={backgroundColor && {backgroundColor}}>
+        <span
+          className="bg-gray-100 text-gray-800 text-sm font-semibold inline-flex items-center p-1.5 rounded-full mr-2 dark:bg-gray-700 dark:text-gray-300"
+          style={backgroundColor && { backgroundColor }}
+        >
           <svg
             aria-hidden="true"
             className="w-3.5 h-3.5"
