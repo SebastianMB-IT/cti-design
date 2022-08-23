@@ -73,14 +73,3 @@ info.args = {
   backgroundColor: '#17a2b8',
   isClosable: false,
 };
-
-export const action = Template.bind({});
-action.args = {
-  alertTitle: 'Information',
-  alertType: 'Something to know!',
-  icon: <VscInfo />,
-  color: '#17a2b8',
-  backgroundColor: '#17a2b8',
-  isClosable: true,
-  iconClose: <IoMdClose />,
-};
