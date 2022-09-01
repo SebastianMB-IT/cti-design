@@ -13,11 +13,10 @@ const meta = {
 
 export default meta;
 
-const Template = args => <Button {...args} />;
+const Template = args => <Button {...args}>Button</Button>;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  label: 'Button',
   size: 'base',
   type: 'primary'
 };
@@ -28,10 +27,23 @@ Secondary.args = {
   type: 'secondary'
 }
 
+export const Rounded = Template.bind({})
+Rounded.args = {
+  ...Primary.args,
+  type: 'primary',
+  fullRounded: true
+}
+
 export const White = Template.bind({})
 White.args = {
   ...Primary.args,
   type: 'white'
+}
+
+export const Red = Template.bind({})
+Red.args = {
+  ...Primary.args,
+  type: 'red'
 }
 
 const TemplateWithChild = args => <Button {...args}>

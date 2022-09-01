@@ -1,10 +1,11 @@
 /**
  * It can be used to render a label with an icon.
  *
- * @param {string} label The label to render.
+ * @param {string} children The children/s to render.
  * @param {string} size The button size.
- * @param {string} icon The icon to render.
- * @param {string} iconPosition The position of the icon.
+ * @param {string} type The type of the button to render.
+ * @param {string} fullRounded The burder full radius property.
+ * 
  */
 
 import React, { FC, ReactNode } from 'react';
@@ -13,32 +14,27 @@ import { useTheme } from '../../theme/Context'
 
 interface ButtonProps {
   children: ReactNode; 
-  label: string;
   size?: 'base' | 'large'
-  icon?: JSX.Element;
-  iconPosition?: 'left' | 'right';
   type: 'primary' | 'secondary' | 'white';
+  fullRounded?: boolean 
 };
 
 export const Button: FC<ButtonProps> = ({
   children,
-  label,
   size,
-  type
+  type,
+  fullRounded
 }): JSX.Element => {
   const { button : buttonTheme } = useTheme().theme
   return (
     <button className={classNames(
       buttonTheme.base,
       buttonTheme[type],
-      'flex-row-reverse',
-      size === 'base' && buttonTheme.size.base,
+      fullRounded ? buttonTheme.fullRounded : buttonTheme.rounded,
+      typeof size === 'undefined' || size === 'base' && buttonTheme.size.base,
       size === 'large' && buttonTheme.size.large,
     )}>
-      {children && children}
-      {typeof label !== 'undefined' && (
-        <span>{label}</span>
-      )}
+      {typeof children !== 'undefined' && children}
     </button>
   );
 };
