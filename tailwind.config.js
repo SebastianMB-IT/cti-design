@@ -10,7 +10,7 @@ module.exports = {
       fontFamily: {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans],
       },
-    },
+    }
   },
   plugins: [
     require('@tailwindcss/forms')

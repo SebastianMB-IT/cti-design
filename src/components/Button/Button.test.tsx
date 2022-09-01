@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Call as Button } from './Button.stories';
+import { Primary as Button } from './Button.stories';
 
 describe('Button', () => {
   it('renders without crashing', () => {
