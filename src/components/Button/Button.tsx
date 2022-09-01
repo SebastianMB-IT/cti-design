@@ -31,7 +31,7 @@ export const Button: FC<ButtonProps> = ({
       buttonTheme.base,
       buttonTheme[type],
       fullRounded ? buttonTheme.fullRounded : buttonTheme.rounded,
-      typeof size === 'undefined' || size === 'base' && buttonTheme.size.base,
+      (typeof size === 'undefined' || size === 'base') && buttonTheme.size.base,
       size === 'large' && buttonTheme.size.large,
     )}>
       {typeof children !== 'undefined' && children}
