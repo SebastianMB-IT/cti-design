@@ -29,3 +29,4 @@ export * from './components/Tab/Tab';
 export * from './components/Table/Table';
 export * from './components/Toast/Toast';
 export * from './components/Toast/AlternativeToast';
+export * from './components/Switch/Switch';

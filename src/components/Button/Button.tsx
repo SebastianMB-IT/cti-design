@@ -8,32 +8,38 @@
  * 
  */
 
-import React, { FC, ReactNode } from 'react';
+import React, { ComponentProps ,FC, ReactNode } from 'react';
 import classNames from 'classnames';
 import { useTheme } from '../../theme/Context'
 
-interface ButtonProps {
+export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color'> {
   children: ReactNode; 
-  size?: 'base' | 'large'
-  type: 'primary' | 'secondary' | 'white';
-  fullRounded?: boolean 
+  size?: 'base' | 'large';
+  styles: 'primary' | 'secondary' | 'white' | 'red';
+  fullRounded?: boolean;
+  disabled?: boolean;
 };
 
 export const Button: FC<ButtonProps> = ({
   children,
   size,
-  type,
-  fullRounded
+  styles,
+  fullRounded,
+  disabled,
+  ...props
 }): JSX.Element => {
   const { button : buttonTheme } = useTheme().theme
   return (
     <button className={classNames(
-      buttonTheme.base,
-      buttonTheme[type],
-      fullRounded ? buttonTheme.fullRounded : buttonTheme.rounded,
-      (typeof size === 'undefined' || size === 'base') && buttonTheme.size.base,
-      size === 'large' && buttonTheme.size.large,
-    )}>
+        buttonTheme.base,
+        buttonTheme[styles],
+        fullRounded ? buttonTheme.fullRounded : buttonTheme.rounded,
+        (typeof size === 'undefined' || size === 'base') && buttonTheme.size.base,
+        size === 'large' && buttonTheme.size.large,
+      )} 
+      disabled={disabled}
+      {...props}
+    >
       {typeof children !== 'undefined' && children}
     </button>
   );

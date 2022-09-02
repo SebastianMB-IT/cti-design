@@ -11,6 +11,20 @@ const theme = {
       base: 'px-3.5 py-2',
       large: 'px-4 py-2.5'
     }
+  },
+  switch: {
+    bg: 'relative inline-flex h-6 w-11 items-center rounded-full',
+    circle: 'inline-block h-4 w-4 transform rounded-full bg-white transition ease-in-out duration-200',
+    on: {
+      translate: 'translate-x-6',
+      gray: 'bg-gray-300',
+      indigo: 'bg-indigo-600'
+    },
+    off: {
+      translate: 'translate-x-1',
+      gray: 'bg-gray-200',
+      indigo: 'bg-indigo-200'
+    }
   }
 }
 
