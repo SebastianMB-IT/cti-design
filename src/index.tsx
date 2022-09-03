@@ -4,10 +4,6 @@
  */
 
 export * from './components/Input/TextInput';
-export * from './components/Input/PasswordInput';
-export * from './components/Input/ToggleSwitch';
-export * from './components/Input/SearchInput';
-export * from './components/Input/UsernameInput';
 export * from './components/Accordion/Accordion';
 export * from './components/Alert/Alert';
 export * from './components/Button/Button';
