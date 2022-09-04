@@ -1,11 +1,11 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Input as Button } from './Input.stories';
+import { Base as TextInput } from './TextInput.stories';
 
 describe('Input', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Button />, div);
+    ReactDOM.render(<TextInput />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

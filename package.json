@@ -83,8 +83,9 @@
   },
   "keywords": [
     "react",
-    "design-system",
+    "typescript",
     "tailwind",
-    "tailwindcss"
+    "tailwindcss",
+    "design-system"
   ]
 }

@@ -2,11 +2,15 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react'
 import { TextInput , TextInputProps } from '../..';
 import { HiMail } from 'react-icons/hi'
+import { MdError } from 'react-icons/md'
 
 const meta = {
   title: 'Components/Input/TextInput',
   component: TextInput,
   argTypes: {
+    onIconClick : {
+      action: 'icon clicked'
+    }
   },
   parameters: {
     controls: { expanded: true },
@@ -17,9 +21,16 @@ export default meta as Meta;
 
 const Template: Story<TextInputProps> = (args) => <TextInput {...args} />;
 
-export const Simple = Template.bind({});
-Simple.args = {
+export const Base = Template.bind({});
+Base.args = {
   placeholder: 'Input placeholder',
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  placeholder: 'Input placeholder',
+  name: 'test',
+  size: 'large'
 };
 
 export const WithLabel = Template.bind({});
@@ -31,52 +42,47 @@ WithLabel.args = {
 
 export const WithLeadingIcon = Template.bind({});
 WithLeadingIcon.args = {
-  label: 'Input label',
-  placeholder: 'Input placeholder',
-  name: 'test',
+  ...WithLabel.args,
   icon: HiMail
 };
 
 export const WithTrailingIcon = Template.bind({});
 WithTrailingIcon.args = {
-  label: 'Input label',
-  placeholder: 'Input placeholder',
-  name: 'test',
+  ...WithLabel.args,
   icon: HiMail,
   iconRight: true
 };
 
 export const WithError = Template.bind({});
 WithError.args = {
-  label: 'Input label',
-  placeholder: 'Input placeholder',
-  name: 'test',
+  ...WithLabel.args,
   error: true
 };
 
 export const ErrorWithHelper = Template.bind({});
 ErrorWithHelper.args = {
-  label: 'Input label',
-  placeholder: 'Input placeholder',
-  name: 'test',
+  ...WithLabel.args,
   helper: 'This is the helper text',
   error: true
 };
 
-export const Password = Template.bind({});
-Password.args = {
-  label: 'Password Input',
-  placeholder: 'Input placeholder',
-  name: 'test',
-  icon: HiMail,
-  iconRight: true
+export const ErrorHelperWithIcon = Template.bind({});
+ErrorHelperWithIcon.args = {
+  ...WithLabel.args,
+  icon: MdError,
+  iconRight: true,
+  helper: 'This is the helper text',
+  error: true
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  label: 'Input label',
-  placeholder: 'Input placeholder',
-  name: 'test',
-  icon: HiMail,
-  iconRight: true
+export const SquaredRight = Template.bind({});
+SquaredRight.args = {
+  ...WithLabel.args,
+  squared: 'right'
+};
+
+export const SquaredLeft = Template.bind({});
+SquaredLeft.args = {
+  ...WithLabel.args,
+  squared: 'left'
 };

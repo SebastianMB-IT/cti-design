@@ -27,19 +27,32 @@ const theme = {
     }
   },
   input: {
-    text: 'block w-full text-gray-600 placeholder-gray-300  bg-white rounded-md mt-1',
+    base: 'block w-full text-gray-600 placeholder-gray-300  bg-white mt-1',
     label: 'text-sm font-medium text-gray-700',
-    icon: 'absolute flex items-center',
-    iconLeft: 'inset-y-0 left-0 pl-3',
-    iconRight: 'inset-y-0 right-0 pr-3',
-    helper: 'mt-2 text-sm text-red-600',
+    helper: 'mt-2 text-sm text-gray-700 text-red-600',
+    size: {
+      base: 'px-3 py-2 sm:text-sm',
+      large: 'px-4 py-3 sm:text-md'
+    },
     colors : {
       gray: 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 placeholder:text-gray-400',
       error: 'border-red-500 text-red-900 focus:border-red-500 focus:ring-red-500 placeholder-red-700',
     },
-    size: {
-      base: 'px-3 py-2 sm:text-sm',
-      lg: ''
+    icon: {
+      base: 'absolute flex items-center',
+      gray: 'text-gray-500',
+      red: 'text-red-600',
+      left: 'inset-y-0 left-0 pl-3',
+      right: 'inset-y-0 right-0 pr-3',
+      size: {
+        base: 'h-5 w-5',
+        large: 'h-6 w-6'
+      }
+    },
+    rounded: {
+      all: 'rounded-md',
+      right: 'rounded-tr-md rounded-br-md',
+      left: 'rounded-tl-md rounded-bl-md'
     }
   }
 }
