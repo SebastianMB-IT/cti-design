@@ -1,5 +1,5 @@
-import React from 'react';
-import { Avatar } from '../..';
+import React from 'react'
+import { Avatar } from '../..'
 
 const meta = {
   title: 'Components/Avatar',
@@ -10,17 +10,17 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
-export default meta;
+}
+export default meta
 
-const Template = args => <Avatar {...args} />;
+const Template = (args) => <Avatar {...args} />
 
-export const Rounded = Template.bind({});
+export const Rounded = Template.bind({})
 Rounded.args = {
   isRounded: true,
-};
+}
 
-export const Squared = Template.bind({});
+export const Squared = Template.bind({})
 Squared.args = {
   isSquared: true,
-};
+}

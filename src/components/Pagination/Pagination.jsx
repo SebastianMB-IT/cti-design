@@ -6,23 +6,23 @@
  * @param {string} end - The text to be used for the next button.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export const Pagination = ({ isDefault, begin, end }) => {
-  const [togglePag, setTogglePag] = React.useState(1);
-  const togglePagination = index => {
-    setTogglePag(index);
-  };
+  const [togglePag, setTogglePag] = React.useState(1)
+  const togglePagination = (index) => {
+    setTogglePag(index)
+  }
   return (
     <div>
       {isDefault && (
-        <nav aria-label="Page navigation example">
-          <ul className="inline-flex -space-x-px">
+        <nav aria-label='Page navigation example'>
+          <ul className='inline-flex -space-x-px'>
             <li>
               <button
                 onClick={() => togglePagination(1)}
-                className="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className='py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
               >
                 {begin}
               </button>
@@ -66,7 +66,7 @@ export const Pagination = ({ isDefault, begin, end }) => {
             <li>
               <button
                 onClick={() => togglePagination(5)}
-                className="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className='py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
               >
                 {end}
               </button>
@@ -75,11 +75,11 @@ export const Pagination = ({ isDefault, begin, end }) => {
         </nav>
       )}
     </div>
-  );
-};
+  )
+}
 
 Pagination.propTypes = {
   isDefault: PropTypes.bool,
   begin: PropTypes.string,
   end: PropTypes.string,
-};
+}

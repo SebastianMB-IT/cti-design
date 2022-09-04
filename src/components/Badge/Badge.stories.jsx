@@ -1,8 +1,8 @@
-import React from 'react';
-import { Badge } from '../..';
-import { AiFillClockCircle } from 'react-icons/ai';
-import { MdEmail } from 'react-icons/md';
-import { BsCheck2 } from 'react-icons/bs';
+import React from 'react'
+import { Badge } from '../..'
+import { AiFillClockCircle } from 'react-icons/ai'
+import { MdEmail } from 'react-icons/md'
+import { BsCheck2 } from 'react-icons/bs'
 
 const meta = {
   title: 'Components/Badge',
@@ -35,12 +35,12 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
-export default meta;
+}
+export default meta
 
-const Template = args => <Badge {...args} />;
+const Template = (args) => <Badge {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
   isLarge: false,
   isDefault: true,
@@ -48,9 +48,9 @@ Default.args = {
   isNotification: false,
   isOnlyIcon: false,
   badgeMessage: 'Default badge',
-};
+}
 
-export const Large = Template.bind({});
+export const Large = Template.bind({})
 Large.args = {
   isLarge: true,
   isDefault: false,
@@ -58,9 +58,9 @@ Large.args = {
   isNotification: false,
   isOnlyIcon: false,
   badgeMessage: 'Large badge',
-};
+}
 
-export const Icon = Template.bind({});
+export const Icon = Template.bind({})
 Icon.args = {
   isLarge: false,
   isDefault: false,
@@ -69,9 +69,9 @@ Icon.args = {
   isOnlyIcon: false,
   badgeMessage: 'Badge with icon',
   icon: <AiFillClockCircle />,
-};
+}
 
-export const Notification = Template.bind({});
+export const Notification = Template.bind({})
 Notification.args = {
   isLarge: false,
   isDefault: false,
@@ -80,9 +80,9 @@ Notification.args = {
   isOnlyIcon: false,
   badgeMessage: '2',
   icon: <MdEmail />,
-};
+}
 
-export const OnlyIcon = Template.bind({});
+export const OnlyIcon = Template.bind({})
 OnlyIcon.args = {
   isLarge: false,
   isDefault: false,
@@ -90,4 +90,4 @@ OnlyIcon.args = {
   isNotification: false,
   isOnlyIcon: true,
   icon: <BsCheck2 />,
-};
+}

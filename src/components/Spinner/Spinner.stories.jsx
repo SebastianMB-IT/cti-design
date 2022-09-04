@@ -1,6 +1,6 @@
-import React from 'react';
-import { Spinner } from '../..';
-import { ImSpinner2 } from 'react-icons/im';
+import React from 'react'
+import { Spinner } from '../..'
+import { ImSpinner2 } from 'react-icons/im'
 
 const meta = {
   title: 'Components/Spinner',
@@ -27,12 +27,12 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
-export default meta;
+}
+export default meta
 
-const Template = args => <Spinner {...args} />;
+const Template = (args) => <Spinner {...args} />
 
-export const Loading = Template.bind({});
+export const Loading = Template.bind({})
 Loading.args = {
   icon: <ImSpinner2 />,
-};
+}

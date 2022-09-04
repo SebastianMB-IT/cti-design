@@ -9,22 +9,23 @@ const theme = {
     rounded: 'rounded-md',
     size: {
       base: 'px-3.5 py-2',
-      large: 'px-4 py-2.5'
-    }
+      large: 'px-4 py-2.5',
+    },
   },
   switch: {
     bg: 'relative inline-flex h-6 w-11 items-center rounded-full',
-    circle: 'inline-block h-4 w-4 transform rounded-full bg-white transition ease-in-out duration-200',
+    circle:
+      'inline-block h-4 w-4 transform rounded-full bg-white transition ease-in-out duration-200',
     on: {
       translate: 'translate-x-6',
       gray: 'bg-gray-300',
-      indigo: 'bg-indigo-600'
+      indigo: 'bg-indigo-600',
     },
     off: {
       translate: 'translate-x-1',
       gray: 'bg-gray-200',
-      indigo: 'bg-indigo-200'
-    }
+      indigo: 'bg-indigo-200',
+    },
   },
   input: {
     base: 'block w-full text-gray-600 placeholder-gray-300  bg-white mt-1',
@@ -32,11 +33,12 @@ const theme = {
     helper: 'mt-2 text-sm text-gray-700 text-red-600',
     size: {
       base: 'px-3 py-2 sm:text-sm',
-      large: 'px-4 py-3 sm:text-md'
+      large: 'px-4 py-3 sm:text-md',
     },
-    colors : {
+    colors: {
       gray: 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 placeholder:text-gray-400',
-      error: 'border-red-500 text-red-900 focus:border-red-500 focus:ring-red-500 placeholder-red-700',
+      error:
+        'border-red-500 text-red-900 focus:border-red-500 focus:ring-red-500 placeholder-red-700',
     },
     icon: {
       base: 'absolute flex items-center',
@@ -46,15 +48,17 @@ const theme = {
       right: 'inset-y-0 right-0 pr-3',
       size: {
         base: 'h-5 w-5',
-        large: 'h-6 w-6'
-      }
+        large: 'h-6 w-6',
+      },
     },
     rounded: {
       all: 'rounded-md',
-      right: 'rounded-tr-md rounded-br-md',
-      left: 'rounded-tl-md rounded-bl-md'
-    }
-  }
+      right: 'rounded-tl-md rounded-bl-md',
+      top: 'rounded-br-md rounded-bl-md',
+      left: 'rounded-tr-md rounded-br-md',
+      bottom: 'rounded-tl-md rounded-tr-md',
+    },
+  },
 }
 
 export default theme

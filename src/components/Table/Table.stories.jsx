@@ -1,5 +1,5 @@
-import React from 'react';
-import { Table } from '../..';
+import React from 'react'
+import { Table } from '../..'
 
 const meta = {
   title: 'Components/Table',
@@ -21,12 +21,12 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
-export default meta;
+}
+export default meta
 
-const Template = args => <Table {...args} />;
+const Template = (args) => <Table {...args} />
 
-export const Standard = Template.bind({});
+export const Standard = Template.bind({})
 Standard.args = {
   header1: 'Header 1',
   header2: 'Header 2',
@@ -43,4 +43,4 @@ Standard.args = {
       column3: 'Column 3',
     },
   ],
-};
+}

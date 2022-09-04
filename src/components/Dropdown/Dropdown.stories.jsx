@@ -1,7 +1,7 @@
-import React from 'react';
-import { Dropdown } from '../..';
-import { RiArrowDownSLine } from 'react-icons/ri';
-import { HiDotsVertical } from 'react-icons/hi';
+import React from 'react'
+import { Dropdown } from '../..'
+import { RiArrowDownSLine } from 'react-icons/ri'
+import { HiDotsVertical } from 'react-icons/hi'
 
 const meta = {
   title: 'Components/Dropdown',
@@ -17,13 +17,13 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
-export default meta;
+export default meta
 
-const Template = args => <Dropdown {...args} />;
+const Template = (args) => <Dropdown {...args} />
 
-export const Text = Template.bind({});
+export const Text = Template.bind({})
 Text.args = {
   dropdownTitle: 'Choose options',
   option1: 'Option 1',
@@ -32,9 +32,9 @@ Text.args = {
   option4: 'Option 4',
   icon: <RiArrowDownSLine />,
   isText: true,
-};
+}
 
-export const Icon = Template.bind({});
+export const Icon = Template.bind({})
 Icon.args = {
   option1: 'Option 1',
   option2: 'Option 2',
@@ -42,4 +42,4 @@ Icon.args = {
   option4: 'Option 4',
   icon: <HiDotsVertical />,
   isIcon: true,
-};
+}

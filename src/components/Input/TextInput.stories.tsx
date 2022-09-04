@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import { TextInput , TextInputProps } from '../..';
+import { TextInput, TextInputProps } from '../..'
 import { HiMail } from 'react-icons/hi'
 import { MdError } from 'react-icons/md'
 
@@ -8,81 +8,79 @@ const meta = {
   title: 'Components/Input/TextInput',
   component: TextInput,
   argTypes: {
-    onIconClick : {
-      action: 'icon clicked'
-    }
+    onIconClick: {
+      action: 'icon clicked',
+    },
+    squared: {
+      control: 'select',
+      options: ['left', 'right', 'top', 'bottom'],
+    },
   },
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
-export default meta as Meta;
+export default meta as Meta
 
-const Template: Story<TextInputProps> = (args) => <TextInput {...args} />;
+const Template: Story<TextInputProps> = (args) => <TextInput {...args} />
 
-export const Base = Template.bind({});
+export const Base = Template.bind({})
 Base.args = {
   placeholder: 'Input placeholder',
-};
+}
 
-export const Large = Template.bind({});
+export const Large = Template.bind({})
 Large.args = {
   placeholder: 'Input placeholder',
   name: 'test',
-  size: 'large'
-};
+  size: 'large',
+}
 
-export const WithLabel = Template.bind({});
+export const WithLabel = Template.bind({})
 WithLabel.args = {
   label: 'Input label',
   placeholder: 'Input placeholder',
-  name: 'test'
-};
+  name: 'test',
+}
 
-export const WithLeadingIcon = Template.bind({});
+export const WithLeadingIcon = Template.bind({})
 WithLeadingIcon.args = {
   ...WithLabel.args,
-  icon: HiMail
-};
+  icon: HiMail,
+}
 
-export const WithTrailingIcon = Template.bind({});
+export const WithTrailingIcon = Template.bind({})
 WithTrailingIcon.args = {
   ...WithLabel.args,
   icon: HiMail,
-  iconRight: true
-};
+  iconRight: true,
+}
 
-export const WithError = Template.bind({});
+export const WithError = Template.bind({})
 WithError.args = {
   ...WithLabel.args,
-  error: true
-};
+  error: true,
+}
 
-export const ErrorWithHelper = Template.bind({});
+export const ErrorWithHelper = Template.bind({})
 ErrorWithHelper.args = {
   ...WithLabel.args,
   helper: 'This is the helper text',
-  error: true
-};
+  error: true,
+}
 
-export const ErrorHelperWithIcon = Template.bind({});
+export const ErrorHelperWithIcon = Template.bind({})
 ErrorHelperWithIcon.args = {
   ...WithLabel.args,
   icon: MdError,
   iconRight: true,
   helper: 'This is the helper text',
-  error: true
-};
+  error: true,
+}
 
-export const SquaredRight = Template.bind({});
-SquaredRight.args = {
+export const Squared = Template.bind({})
+Squared.args = {
   ...WithLabel.args,
-  squared: 'right'
-};
-
-export const SquaredLeft = Template.bind({});
-SquaredLeft.args = {
-  ...WithLabel.args,
-  squared: 'left'
-};
+  squared: 'right',
+}

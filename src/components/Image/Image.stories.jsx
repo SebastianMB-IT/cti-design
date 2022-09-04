@@ -1,5 +1,5 @@
-import React from 'react';
-import { Image } from '../..';
+import React from 'react'
+import { Image } from '../..'
 
 const meta = {
   title: 'Components/Image',
@@ -14,11 +14,11 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
-export default meta;
+}
+export default meta
 
-const Template = args => <Image {...args} />;
-export const Default = Template.bind({});
+const Template = (args) => <Image {...args} />
+export const Default = Template.bind({})
 Default.args = {
   enabled: false,
-};
+}

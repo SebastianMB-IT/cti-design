@@ -1,5 +1,5 @@
-import React from 'react';
-import { Segment } from '../..';
+import React from 'react'
+import { Segment } from '../..'
 
 const meta = {
   title: 'Components/Segment',
@@ -12,13 +12,13 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
-export default meta;
+export default meta
 
-const Template = args => <Segment {...args} />;
+const Template = (args) => <Segment {...args} />
 
-export const Content = Template.bind({});
+export const Content = Template.bind({})
 Content.args = {
   segmentContent: 'Write something here!',
-};
+}

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Alert } from '../..';
-import { HiInformationCircle } from 'react-icons/hi';
-import { AiFillEye } from 'react-icons/ai';
+import React from 'react'
+import { Alert } from '../..'
+import { HiInformationCircle } from 'react-icons/hi'
+import { AiFillEye } from 'react-icons/ai'
 
 const meta = {
   title: 'Components/Alert',
@@ -12,13 +12,13 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
-export default meta;
+export default meta
 
-const Template = args => <Alert {...args} />;
+const Template = (args) => <Alert {...args} />
 
-export const Action = Template.bind({});
+export const Action = Template.bind({})
 Action.args = {
   alertTitle: 'This is a info alert',
   alertType: 'More info about this info danger goes here!',
@@ -30,21 +30,21 @@ Action.args = {
   isBorder: false,
   button1Title: 'View more',
   button2Title: 'Dismiss',
-};
+}
 
-export const Border = Template.bind({});
+export const Border = Template.bind({})
 Border.args = {
   alertType: 'A simple info alert',
   icon: <HiInformationCircle />,
   isAction: false,
   isBorder: true,
-};
+}
 
-export const Simple = Template.bind({});
+export const Simple = Template.bind({})
 Simple.args = {
   alertType: 'A simple info alert',
   icon: <HiInformationCircle />,
   isAction: false,
   isBorder: false,
   isSimple: true,
-};
+}

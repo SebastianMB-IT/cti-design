@@ -1,5 +1,5 @@
-import React from 'react';
-import { Switch } from '../..';
+import React from 'react'
+import { Switch } from '../..'
 
 const meta = {
   title: 'Components/Switch',
@@ -11,38 +11,37 @@ const meta = {
         category: 'Events',
         subcategory: 'Button Events',
       },
-    }
+    },
   },
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
-export default meta;
+export default meta
 
-const Template = args => <Switch {...args} />;
+const Template = (args) => <Switch {...args} />
 
-export const Off = Template.bind({});
-Off.args = {
-};
+export const Off = Template.bind({})
+Off.args = {}
 
-export const On = Template.bind({});
+export const On = Template.bind({})
 On.args = {
-  on: true
-};
+  on: true,
+}
 
-export const OffDisabled = Template.bind({});
+export const OffDisabled = Template.bind({})
 OffDisabled.args = {
-  disabled: true
-};
+  disabled: true,
+}
 
-export const OnDisabled = Template.bind({});
+export const OnDisabled = Template.bind({})
 OnDisabled.args = {
   on: true,
-  disabled: true
-};
+  disabled: true,
+}
 
-export const WithLabel = Template.bind({});
+export const WithLabel = Template.bind({})
 WithLabel.args = {
-  label: 'Enable notifications'
-};
+  label: 'Enable notifications',
+}

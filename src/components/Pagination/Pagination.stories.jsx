@@ -1,5 +1,5 @@
-import React from 'react';
-import { Pagination } from '../..';
+import React from 'react'
+import { Pagination } from '../..'
 
 const meta = {
   title: 'Components/Pagination',
@@ -8,14 +8,14 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
-export default meta;
+}
+export default meta
 
-const Template = args => <Pagination {...args} />;
+const Template = (args) => <Pagination {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
   isDefault: true,
   begin: 'Previous',
   end: 'Next',
-};
+}

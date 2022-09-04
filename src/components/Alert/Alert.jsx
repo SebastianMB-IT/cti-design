@@ -10,8 +10,8 @@
  * @param {element} iconButton The icon for the close button.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export const Alert = ({
   alertTitle,
@@ -30,42 +30,42 @@ export const Alert = ({
     <div>
       {isAction && (
         <div
-          id="alert-additional-content-1"
-          class="p-4 mb-4 border border-blue-300 rounded-lg bg-blue-50 dark:bg-blue-300"
-          role="alert"
+          id='alert-additional-content-1'
+          className='p-4 mb-4 border border-blue-300 rounded-lg bg-blue-50 dark:bg-blue-300'
+          role='alert'
         >
-          <div class="flex items-center">
+          <div className='flex items-center'>
             <svg
-              aria-hidden="true"
-              class="w-5 h-5 mr-2 text-blue-900"
-              fill="currentColor"
-              viewBox="0 0 20 25"
+              aria-hidden='true'
+              className='w-5 h-5 mr-2 text-blue-900'
+              fill='currentColor'
+              viewBox='0 0 20 25'
             >
               {icon}
             </svg>
-            <h3 class="text-lg font-medium text-blue-900">{alertTitle}</h3>
+            <h3 className='text-lg font-medium text-blue-900'>{alertTitle}</h3>
           </div>
-          <div class="mt-2 mb-4 text-sm text-blue-900">{alertType}</div>
-          <div class="flex">
+          <div className='mt-2 mb-4 text-sm text-blue-900'>{alertType}</div>
+          <div className='flex'>
             <button
-              type="button"
-              class="text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-blue-800 dark:hover:bg-blue-900"
+              type='button'
+              className='text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-blue-800 dark:hover:bg-blue-900'
             >
               <svg
-                aria-hidden="true"
-                class="-ml-0.5 mr-2 h-4 w-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
+                aria-hidden='true'
+                className='-ml-0.5 mr-2 h-4 w-4'
+                fill='currentColor'
+                viewBox='0 0 20 20'
               >
                 {iconButton}
               </svg>
               {button1Title}
             </button>
             <button
-              type="button"
-              class="text-blue-900 bg-transparent border border-blue-900 hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-blue-800 dark:text-blue-800 dark:hover:text-white"
-              data-dismiss-target="#alert-additional-content-1"
-              aria-label="Close"
+              type='button'
+              className='text-blue-900 bg-transparent border border-blue-900 hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-blue-800 dark:text-blue-800 dark:hover:text-white'
+              data-dismiss-target='#alert-additional-content-1'
+              aria-label='Close'
             >
               {button2Title}
             </button>
@@ -74,42 +74,42 @@ export const Alert = ({
       )}
       {isBorder && (
         <div
-          id="alert-border-1"
-          class="flex p-4 mb-4 bg-blue-100 border-t-4 border-blue-500 dark:bg-blue-200"
-          role="alert"
+          id='alert-border-1'
+          className='flex p-4 mb-4 bg-blue-100 border-t-4 border-blue-500 dark:bg-blue-200'
+          role='alert'
         >
           <svg
-            class="flex-shrink-0 w-5 h-5 text-blue-700"
-            fill="currentColor"
-            viewBox="0 0 20 25"
+            className='flex-shrink-0 w-5 h-5 text-blue-700'
+            fill='currentColor'
+            viewBox='0 0 20 25'
           >
             {icon}
           </svg>
-          <div class="ml-3 text-sm font-medium text-blue-700">{alertType}</div>
+          <div className='ml-3 text-sm font-medium text-blue-700'>{alertType}</div>
         </div>
       )}
       {isSimple && (
         <div
-          id="alert-1"
-          class="flex p-4 mb-4 bg-blue-100 rounded-lg dark:bg-blue-200"
-          role="alert"
+          id='alert-1'
+          className='flex p-4 mb-4 bg-blue-100 rounded-lg dark:bg-blue-200'
+          role='alert'
         >
           <svg
-            aria-hidden="true"
-            class="flex-shrink-0 w-5 h-5 text-blue-700 dark:text-blue-800"
-            fill="currentColor"
-            viewBox="0 0 20 25"
+            aria-hidden='true'
+            className='flex-shrink-0 w-5 h-5 text-blue-700 dark:text-blue-800'
+            fill='currentColor'
+            viewBox='0 0 20 25'
           >
             {icon}
           </svg>
-          <div class="ml-3 text-sm font-medium text-blue-700 dark:text-blue-800">
+          <div className='ml-3 text-sm font-medium text-blue-700 dark:text-blue-800'>
             {alertType}
           </div>
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
 Alert.propTypes = {
   alertTitle: PropTypes.string.isRequired,
@@ -121,7 +121,7 @@ Alert.propTypes = {
   isBorder: PropTypes.bool,
   button1Title: PropTypes.string,
   button2Title: PropTypes.string,
-};
+}
 Alert.defaultProps = {
   alertType: 'Here will go all the necessary for the alert type',
-};
+}

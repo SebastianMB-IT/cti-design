@@ -11,46 +11,35 @@
  *
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const renderRows = (rows, index) => {
   return (
-    <tr
-      key={index}
-      className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-    >
-      <td className="py-4 px-6">{rows.column1}</td>
-      <td className="py-4 px-6">{rows.column2}</td>
-      <td className="py-4 px-6">{rows.column3}</td>
+    <tr key={index} className='bg-white border-b dark:bg-gray-800 dark:border-gray-700'>
+      <td className='py-4 px-6'>{rows.column1}</td>
+      <td className='py-4 px-6'>{rows.column2}</td>
+      <td className='py-4 px-6'>{rows.column3}</td>
     </tr>
-  );
-};
+  )
+}
 
-export const Table = ({
-  backgroundColor,
-  color,
-  index,
-  rows,
-  header1,
-  header2,
-  header3,
-}) => {
+export const Table = ({ backgroundColor, color, index, rows, header1, header2, header3 }) => {
   return (
-    <div className="overflow-x-auto relative">
-      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <div className='overflow-x-auto relative'>
+      <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
         <thead
-          className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'
           style={backgroundColor && { backgroundColor }}
         >
           <tr style={color && { color }}>
-            <th scope="col" className="py-3 px-6">
+            <th scope='col' className='py-3 px-6'>
               {header1}
             </th>
-            <th scope="col" className="py-3 px-6">
+            <th scope='col' className='py-3 px-6'>
               {header2}
             </th>
-            <th scope="col" className="py-3 px-6">
+            <th scope='col' className='py-3 px-6'>
               {header3}
             </th>
           </tr>
@@ -58,8 +47,8 @@ export const Table = ({
         <tbody>{rows.map(renderRows)}</tbody>
       </table>
     </div>
-  );
-};
+  )
+}
 
 Table.propTypes = {
   backgroundColor: PropTypes.string,
@@ -68,4 +57,4 @@ Table.propTypes = {
   header1: PropTypes.string,
   header2: PropTypes.string,
   header3: PropTypes.string,
-};
+}

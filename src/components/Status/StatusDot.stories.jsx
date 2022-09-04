@@ -1,5 +1,5 @@
-import React from 'react';
-import { StatusDot } from '../..';
+import React from 'react'
+import { StatusDot } from '../..'
 
 const meta = {
   title: 'Components/Status',
@@ -15,11 +15,11 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
-export default meta;
+}
+export default meta
 
-const Template = args => <StatusDot {...args} />;
-export const Standard = Template.bind({});
+const Template = (args) => <StatusDot {...args} />
+export const Standard = Template.bind({})
 Standard.args = {
   enabled: false,
-};
+}

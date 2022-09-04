@@ -1,7 +1,7 @@
-import React from 'react';
-import { Accordion } from '../..';
-import { HiInformationCircle } from 'react-icons/hi';
-import { AiFillEye } from 'react-icons/ai';
+import React from 'react'
+import { Accordion } from '../..'
+import { HiInformationCircle } from 'react-icons/hi'
+import { AiFillEye } from 'react-icons/ai'
 
 const meta = {
   title: 'Components/Accordion',
@@ -12,13 +12,13 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
-export default meta;
+export default meta
 
-const Template = args => <Accordion {...args} />;
+const Template = (args) => <Accordion {...args} />
 
-export const Flush = Template.bind({});
+export const Flush = Template.bind({})
 Flush.args = {
   accordion1Type: 'A simple info Accordion',
   accordion2Type: 'A simple info Accordion',
@@ -30,9 +30,9 @@ Flush.args = {
   isFlush: true,
   isBorder: false,
   isSimple: false,
-};
+}
 
-export const Border = Template.bind({});
+export const Border = Template.bind({})
 Border.args = {
   accordion1Type: 'A simple info Accordion',
   accordion2Type: 'A simple info Accordion',
@@ -44,9 +44,9 @@ Border.args = {
   isAction: false,
   isBorder: true,
   isSimple: false,
-};
+}
 
-export const Simple = Template.bind({});
+export const Simple = Template.bind({})
 Simple.args = {
   accordion1Type: 'A simple info Accordion',
   accordion2Type: 'A simple info Accordion',
@@ -58,4 +58,4 @@ Simple.args = {
   isAction: false,
   isBorder: false,
   isSimple: true,
-};
+}

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card } from '../..';
+import React from 'react'
+import { Card } from '../..'
 
 const meta = {
   title: 'Components/Card/Card',
@@ -12,13 +12,13 @@ const meta = {
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
-export default meta;
+export default meta
 
-const Template = args => <Card {...args} />;
+const Template = (args) => <Card {...args} />
 
-export const Content = Template.bind({});
+export const Content = Template.bind({})
 Content.args = {
   content: 'Write the content of the cards here',
-};
+}
