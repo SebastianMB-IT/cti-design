@@ -1,6 +1,6 @@
 const theme = {
   button: {
-    base: 'flex content-center items-center font-medium tracking-wide capitalize transition-colors duration-200 transform focus:outline-none focus:ring focus:ring-opacity-80 gap-2',
+    base: 'flex content-center items-center font-medium tracking-wide transition-colors duration-200 transform focus:outline-none focus:ring focus:ring-opacity-80 gap-2',
     primary: 'focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 text-white',
     secondary: 'focus:ring-indigo-500 bg-indigo-200 hover:bg-indigo-300 text-indigo-600',
     white: 'border border-gray-300 focus:ring-gray-300 bg-white hover:bg-gray-100 text-gray-700',
@@ -59,6 +59,21 @@ const theme = {
       bottom: 'rounded-tl-md rounded-tr-md',
     },
   },
+  modal: {
+    base: 'fixed inset-0 z-10 overflow-y-auto',
+    col: 'flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0',
+    main: 'relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg',
+    content: {
+      base: 'bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4',
+    },
+    actions: {
+      base: 'bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6'
+    },
+    size: {
+      base: '',
+      large: ''
+    }
+  }
 }
 
 export default theme

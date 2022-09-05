@@ -12,10 +12,10 @@ import React, { ComponentProps, FC, ReactNode } from 'react'
 import classNames from 'classnames'
 import { useTheme } from '../../theme/Context'
 
-export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color'> {
-  children: ReactNode
+export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color' | 'style'> {
+  children?: ReactNode
   size?: 'base' | 'large'
-  styles: 'primary' | 'secondary' | 'white' | 'red'
+  style?: 'primary' | 'secondary' | 'white' | 'red'
   fullRounded?: boolean
   disabled?: boolean
 }
@@ -23,7 +23,7 @@ export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' 
 export const Button: FC<ButtonProps> = ({
   children,
   size,
-  styles,
+  style='primary',
   fullRounded,
   disabled,
   ...props
@@ -33,7 +33,7 @@ export const Button: FC<ButtonProps> = ({
     <button
       className={classNames(
         buttonTheme.base,
-        buttonTheme[styles],
+        buttonTheme[style],
         fullRounded ? buttonTheme.fullRounded : buttonTheme.rounded,
         (typeof size === 'undefined' || size === 'base') && buttonTheme.size.base,
         size === 'large' && buttonTheme.size.large,

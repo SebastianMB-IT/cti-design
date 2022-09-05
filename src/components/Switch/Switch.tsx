@@ -4,7 +4,7 @@
  * @param {string} on To render the button on.
  * @param {string} changed The callback when changed.
  * @param {string} disabled To render the button disabled.
- * @param {string} fullRounded The burder full radius property.
+ * @param {string} label The label to show.
  *
  */
 
@@ -26,10 +26,6 @@ export const Switch: FC<SwitchProps> = ({ changed, on, disabled, label }): JSX.E
   const bgOn = disabled ? switchTheme.off.indigo : switchTheme.on.indigo
   const bgOff = disabled ? switchTheme.off.gray : switchTheme.on.gray
 
-  const onChange = () => {
-    setEnabled(!enabled)
-  }
-
   useEffect(() => {
     changed && changed(enabled)
   }, [enabled])
@@ -40,7 +36,7 @@ export const Switch: FC<SwitchProps> = ({ changed, on, disabled, label }): JSX.E
         {label && <HeadlessSwitch.Label className='mr-4'>{label}</HeadlessSwitch.Label>}
         <HeadlessSwitch
           checked={enabled}
-          onChange={onChange}
+          onChange={() => setEnabled(!enabled)}
           disabled={disabled}
           className={classNames(enabled ? bgOn : bgOff, switchTheme.bg)}
         >

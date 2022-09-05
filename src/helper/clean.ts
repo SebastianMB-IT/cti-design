@@ -5,16 +5,16 @@ export interface ClearProps {
   source: Record<string, unknown>
 }
 
-export const clearClassName = (props: PropsWithChildren<object>): object => {
-  return clear({
+export const cleanClassName = (props: PropsWithChildren<object>): object => {
+  return clean({
     key: 'className',
     source: props,
   })
 }
 
-const clear = ({ key, source }: ClearProps): object => {
+const clean = ({ key, source }: ClearProps): object => {
   delete source[key]
   return source
 }
 
-export default clear
+export default clean

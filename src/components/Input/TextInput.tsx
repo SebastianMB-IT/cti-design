@@ -13,21 +13,24 @@
  *
  */
 
-import React, { ComponentProps, FC, forwardRef } from 'react'
-import { clearClassName } from '../../helper/clear'
-import { useTheme } from '../../theme/Context'
-import classNames from 'classnames'
+import React, { ComponentProps, FC, forwardRef } from 'react';
+import { cleanClassName } from '../../helper/clean';
+import { useTheme } from '../../theme/Context';
+import classNames from 'classnames';
 
 export interface TextInputProps
-  extends Omit<ComponentProps<'input'>, 'ref' | 'color' | 'className' | 'size'> {
-  label?: string
-  icon?: FC<ComponentProps<'svg'>>
-  iconRight?: boolean
-  error?: boolean
-  helper?: string
-  size?: 'base' | 'large'
-  squared?: 'left' | 'right' | 'top' | 'bottom'
-  onIconClick?: () => void
+  extends Omit<
+    ComponentProps<'input'>,
+    'ref' | 'color' | 'className' | 'size'
+  > {
+  label?: string;
+  icon?: FC<ComponentProps<'svg'>>;
+  iconRight?: boolean;
+  error?: boolean;
+  helper?: string;
+  size?: 'base' | 'large';
+  squared?: 'left' | 'right' | 'top' | 'bottom';
+  onIconClick?: () => void;
 }
 
 export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
@@ -45,26 +48,28 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       onIconClick,
       ...props
     },
-    ref,
+    ref
   ) => {
-    const clearProps = clearClassName(props)
-    const { input: theme } = useTheme().theme
+    const cleanProps = cleanClassName(props);
+    const { input: theme } = useTheme().theme;
     return (
       <div>
         {label && <label className={theme.label}>{label}</label>}
-        <div className='relative'>
+        <div className="relative">
           {Icon && (
             <div
               className={classNames(
                 theme.icon.base,
-                iconRight ? theme.icon.right : theme.icon.left,
+                iconRight ? theme.icon.right : theme.icon.left
               )}
             >
               <Icon
                 className={classNames(
-                  size === 'large' ? theme.icon.size.large : theme.icon.size.base,
+                  size === 'large'
+                    ? theme.icon.size.large
+                    : theme.icon.size.base,
                   error ? theme.icon.red : theme.icon.gray,
-                  onIconClick && 'cursor-pointer',
+                  onIconClick && 'cursor-pointer'
                 )}
                 onClick={() => onIconClick && onIconClick()}
               />
@@ -78,14 +83,14 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               squared ? theme.rounded[squared] : theme.rounded.all,
               size && size === 'large' ? theme.size.large : theme.size.base,
               !error ? theme.colors.gray : theme.colors.error,
-              Icon && !iconRight && 'pl-10',
+              Icon && !iconRight && 'pl-10'
             )}
-            {...clearProps}
+            {...cleanProps}
             ref={ref}
           />
         </div>
         {helper && <p className={classNames(theme.helper)}>{helper}</p>}
       </div>
-    )
-  },
-)
+    );
+  }
+);

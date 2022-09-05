@@ -13,7 +13,7 @@ const meta = {
       },
       action: 'clicked',
     },
-    styles: {
+    style: {
       options: ['primary', 'secondary', 'white', 'red'],
     },
   },
@@ -29,32 +29,32 @@ const Template = (args) => <Button {...args}>Button</Button>
 export const Primary = Template.bind({})
 Primary.args = {
   size: 'base',
-  styles: 'primary',
+  style: 'primary',
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
   ...Primary.args,
-  styles: 'secondary',
+  style: 'secondary',
 }
 
 export const Rounded = Template.bind({})
 Rounded.args = {
   ...Primary.args,
-  styles: 'primary',
+  style: 'primary',
   fullRounded: true,
 }
 
 export const White = Template.bind({})
 White.args = {
   ...Primary.args,
-  styles: 'white',
+  style: 'white',
 }
 
 export const Red = Template.bind({})
 Red.args = {
   ...Primary.args,
-  styles: 'red',
+  style: 'red',
 }
 
 const TemplateWithChild = (args) => (
@@ -67,7 +67,7 @@ const TemplateWithChild = (args) => (
 export const WithIcon = TemplateWithChild.bind({})
 WithIcon.args = {
   size: 'base',
-  styles: 'primary',
+  style: 'primary',
 }
 
 const TemplateWithChildRight = (args) => (
@@ -80,5 +80,5 @@ const TemplateWithChildRight = (args) => (
 export const WithIconRight = TemplateWithChildRight.bind({})
 WithIconRight.args = {
   size: 'base',
-  styles: 'primary',
+  style: 'primary',
 }
