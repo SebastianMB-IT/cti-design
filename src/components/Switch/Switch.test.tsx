@@ -1,11 +1,7 @@
 import React from 'react'
-import * as ReactDOM from 'react-dom'
 import { Off as Switch } from './Switch.stories'
+import { render } from '@testing-library/react';
 
-describe('Switch', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div')
-    ReactDOM.render(<Switch />, div)
-    ReactDOM.unmountComponentAtNode(div)
-  })
+test('should show login form', () => {
+  render(<Switch />)
 })
