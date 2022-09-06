@@ -1,10 +1,10 @@
 /**
  * The switch can be used to manage boolean values.
  *
- * @param {string} on To render the button on.
- * @param {string} changed The callback when changed.
- * @param {string} disabled To render the button disabled.
- * @param {string} label The label to show.
+ * @param on - To render the button on.
+ * @param changed - The callback when changed.
+ * @param disabled - To render the button disabled.
+ * @param label - The label to show.
  *
  */
 

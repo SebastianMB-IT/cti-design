@@ -1,6 +1,10 @@
 /**
  *
- * Modal component
+ * The Modal component shows elements in foreground
+ * 
+ * @param root - The root element of the modal.
+ * @param show - The parameter to show the modal.
+ * @param size - The size of the modal.
  *
  */
 
@@ -12,13 +16,10 @@ import { cleanClassName } from '../../helper/clean';
 import { createPortal } from 'react-dom';
 import { ModalContent } from './ModalContent';
 import { ModalActions } from './ModalActions';
-import { ModalContext } from './ModalContext';
 import windowExists from '../../helper/window';
 
 export interface ModalProps
   extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
-  onClose?: () => void;
-  popup?: boolean;
   root?: HTMLElement;
   show?: boolean;
   size?: 'base' | 'large';
@@ -28,9 +29,7 @@ const ModalComponent: FC<ModalProps> = ({
   children,
   root = windowExists() ? document.body : undefined,
   show,
-  popup,
   size = 'base',
-  onClose,
   ...props
 }) => {
   const [container] = useState<HTMLDivElement | undefined>(
@@ -53,7 +52,7 @@ const ModalComponent: FC<ModalProps> = ({
 
   return container
     ? createPortal(
-        <ModalContext.Provider value={{ popup, onClose }}>
+        <>
           <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
           <div
             aria-hidden={!show}
@@ -67,7 +66,7 @@ const ModalComponent: FC<ModalProps> = ({
               <div className={theme.main}>{children}</div>
             </div>
           </div>
-        </ModalContext.Provider>,
+        </>,
         container
       )
     : null;

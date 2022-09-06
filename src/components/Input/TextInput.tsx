@@ -1,15 +1,15 @@
 /**
- * It renders input fields.
+ * It renders an input fields.
  *
- * @param {string} label The label to render.
- * @param {string} placeholder The placeholder to render.
- * @param {HTMLElement} icon The icon to show.
- * @param {boolean} iconRight The position of the icon.
- * @param {string} error The position of the icon.
- * @param {string} helper The text of the helper.
- * @param {string} size The size of the input.
- * @param {string} squared The radius of the border.
- * @param {function} onIconClick The callback on icon click.
+ * @param label - The label to render.
+ * @param placeholder - The placeholder to render.
+ * @param icon - The icon to show.
+ * @param iconRight - The position of the icon.
+ * @param error - The position of the icon.
+ * @param helper - The text of the helper.
+ * @param size - The size of the input.
+ * @param squared - The radius of the border.
+ * @param onIconClick - The callback on icon click.
  *
  */
 

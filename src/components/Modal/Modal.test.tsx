@@ -1,7 +1,11 @@
 import React from 'react'
-import { Base as Modal } from './Modal.stories'
+import { Warning, WithForm } from './Modal.stories'
 import { render } from '@testing-library/react';
 
-test('should show login form', () => {
-  render(<Modal />)
+test('should show warning modal', () => {
+  render(<Warning show={true} />)
+})
+
+test('should show modal with form', () => {
+  render(<WithForm show={true} />)
 })

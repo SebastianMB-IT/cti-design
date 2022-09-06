@@ -1,15 +1,25 @@
 const theme = {
   button: {
-    base: 'flex content-center items-center font-medium tracking-wide transition-colors duration-200 transform focus:outline-none focus:ring focus:ring-opacity-80 gap-2',
-    primary: 'focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 text-white',
-    secondary: 'focus:ring-indigo-500 bg-indigo-200 hover:bg-indigo-300 text-indigo-600',
-    white: 'border border-gray-300 focus:ring-gray-300 bg-white hover:bg-gray-100 text-gray-700',
-    red: 'focus:ring-red-300 bg-red-600 hover:bg-red-700 text-white',
+    base: 'flex content-center items-center justify-center font-medium tracking-wide transition-colors duration-200 transform focus:outline-none focus:ring focus:ring-opacity-80 gap-2',
+    primary:
+      'focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 text-white border border-transparent',
+    secondary:
+      'focus:ring-indigo-500 bg-indigo-200 hover:bg-indigo-300 text-indigo-600 border border-transparent',
+    white:
+      'border border-gray-300 focus:ring-gray-300 bg-white hover:bg-gray-100 text-gray-700',
+    red: 'focus:ring-red-300 bg-red-600 hover:bg-red-700 text-white border border-transparent',
     fullRounded: 'rounded-full',
     rounded: 'rounded-md',
     size: {
       base: 'px-3.5 py-2',
       large: 'px-4 py-2.5',
+      full: {
+        sm: 'w-full sm:w-auto',
+        md: 'w-full md:w-auto',
+        lg: 'w-full lg:w-auto',
+        xl: 'w-full xl:w-auto',
+        '2xl': 'w-full 2xl:w-auto',
+      },
     },
   },
   switch: {
@@ -61,19 +71,19 @@ const theme = {
   },
   modal: {
     base: 'fixed inset-0 z-10 overflow-y-auto',
-    col: 'flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0',
+    col: 'flex min-h-full items-end justify-center p-4 text-center items-center sm:p-0',
     main: 'relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg',
     content: {
-      base: 'bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4',
+      base: 'bg-white pt-6 pl-6 pr-6 pb-4 pt-5 pb-4 sm:p-6 sm:pb-4 gap-4',
     },
     actions: {
-      base: 'bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6'
+      base: 'bg-gray-50 px-6 py-3 flex flex-col sm:flex-row sm:flex-row-reverse sm:px-6 gap-3 items-center',
     },
     size: {
       base: '',
-      large: ''
-    }
-  }
-}
+      large: '',
+    },
+  },
+};
 
-export default theme
+export default theme;
