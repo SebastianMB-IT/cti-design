@@ -3,50 +3,48 @@
  *
  * @param children - The children/s to render.
  * @param size - The button size.
- * @param type - The type of the button to render.
- * @param fullRounded - The burder full radius property.
+ * @param variant - The variant of the button to render.
+ * @param disabled - The disabled properti of the button.
+ * @param rounded - The burder full radius property.
  *
  */
 
-import React, { ComponentProps, FC, ReactNode } from 'react';
+import React, { ComponentPropsWithRef, forwardRef } from 'react';
 import classNames from 'classnames';
 import { useTheme } from '../../theme/Context';
 
 export interface ButtonProps
-  extends Omit<ComponentProps<'button'>, 'className' | 'color' | 'style'> {
-  children?: ReactNode;
+  extends Omit<ComponentPropsWithRef<'button'>, 'className' | 'color' | 'style'> {
   size?: 'base' | 'large';
-  style?: 'primary' | 'secondary' | 'white' | 'red';
+  variant?: 'primary' | 'secondary' | 'light' | 'danger';
   disabled?: boolean;
-  fullRounded?: boolean;
-  fullWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+  rounded?: 'base' | 'full';
 }
 
-export const Button: FC<ButtonProps> = ({
+export const Button = forwardRef<HTMLButtonElement, ButtonProps> (({
   children,
   size,
-  style = 'primary',
+  variant = 'primary',
   disabled,
-  fullRounded,
-  fullWidth,
+  rounded = 'base',
   ...props
-}): JSX.Element => {
+}, ref): JSX.Element => {
   const { button: theme } = useTheme().theme;
   return (
     <button
       className={classNames(
         theme.base,
-        theme[style],
-        fullRounded ? theme.fullRounded : theme.rounded,
+        theme[variant],
+        rounded === 'full' ? theme.rounded.full : theme.rounded.base,
         (typeof size === 'undefined' || size === 'base') &&
-          theme.size.base,
-        size === 'large' && theme.size.large,
-        fullWidth && theme.size.full[fullWidth]
+          theme.sizes.base,
+        size === 'large' && theme.sizes.large
       )}
       disabled={disabled}
       {...props}
+      ref={ref}
     >
       {typeof children !== 'undefined' && children}
     </button>
   );
-};
+})

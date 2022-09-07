@@ -1,79 +1,73 @@
 /**
  *
  * The Modal component shows elements in foreground
- * 
- * @param root - The root element of the modal.
+ *
  * @param show - The parameter to show the modal.
  * @param size - The size of the modal.
  *
  */
 
-import type { FC, ComponentProps, PropsWithChildren } from 'react';
-import React, { useEffect, useState } from 'react';
-import classNames from 'classnames';
+import { FC, ComponentProps, PropsWithChildren, RefObject } from 'react';
+import React, { Fragment, createRef } from 'react';
 import { useTheme } from '../../theme/Context';
 import { cleanClassName } from '../../helper/clean';
-import { createPortal } from 'react-dom';
 import { ModalContent } from './ModalContent';
 import { ModalActions } from './ModalActions';
-import windowExists from '../../helper/window';
+import { Transition, Dialog } from '@headlessui/react';
 
 export interface ModalProps
   extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
-  root?: HTMLElement;
   show?: boolean;
   size?: 'base' | 'large';
+  focus?: RefObject<HTMLElement>;
+  onClose: () => void;
 }
 
 const ModalComponent: FC<ModalProps> = ({
   children,
-  root = windowExists() ? document.body : undefined,
   show,
   size = 'base',
+  focus = createRef(),
+  onClose,
   ...props
 }) => {
-  const [container] = useState<HTMLDivElement | undefined>(
-    windowExists() ? document.createElement('div') : undefined
-  );
-  const theme = useTheme().theme.modal;
+  const { modal: theme } = useTheme().theme;
   const cleanProps = cleanClassName(props);
 
-  useEffect(() => {
-    if (!container || !root || !show) {
-      return;
-    }
-
-    root.appendChild(container);
-
-    return () => {
-      root.removeChild(container);
-    };
-  }, [container, root, show]);
-
-  return container
-    ? createPortal(
-        <>
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-          <div
-            aria-hidden={!show}
-            aria-labelledby="modal-title"
-            className={classNames(theme.base)}
-            data-testid="modal"
-            role="dialog"
-            {...cleanProps}
-          >
-            <div className={theme.col}>
-              <div className={theme.main}>{children}</div>
-            </div>
+  return (
+    <Transition.Root show={show} as={Fragment}>
+      <Dialog
+        as="div"
+        className="relative z-10"
+        onClose={() => onClose()}
+        initialFocus={focus && focus}
+        {...cleanProps}
+      >
+        <Transition.Child
+          as={Fragment}
+          {...theme.panel.transition}
+        >
+          <div className={theme.background.base} />
+        </Transition.Child>
+        <div className="fixed inset-0 z-10 overflow-y-auto">
+          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <Transition.Child
+              as={Fragment}
+              {...theme.background.transition}
+            >
+              <Dialog.Panel className={theme.panel.base}>
+                {children}
+              </Dialog.Panel>
+            </Transition.Child>
           </div>
-        </>,
-        container
-      )
-    : null;
+        </div>
+      </Dialog>
+    </Transition.Root>
+  );
 };
 
 ModalComponent.displayName = 'Modal';
-ModalContent.displayName = 'Modal.Title';
+ModalContent.displayName = 'Modal.Content';
 ModalActions.displayName = 'Modal.Actions';
 
 export const Modal = Object.assign(ModalComponent, {

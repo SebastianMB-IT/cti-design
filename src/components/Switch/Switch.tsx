@@ -23,8 +23,8 @@ interface SwitchProps {
 export const Switch: FC<SwitchProps> = ({ changed, on, disabled, label }): JSX.Element => {
   const [enabled, setEnabled] = useState(on || false)
   const { switch: switchTheme } = useTheme().theme
-  const bgOn = disabled ? switchTheme.off.indigo : switchTheme.on.indigo
-  const bgOff = disabled ? switchTheme.off.gray : switchTheme.on.gray
+  const backgroundOn = disabled ? switchTheme.off.indigo : switchTheme.on.indigo
+  const backgroundOff = disabled ? switchTheme.off.gray : switchTheme.on.gray
 
   useEffect(() => {
     changed && changed(enabled)
@@ -38,7 +38,7 @@ export const Switch: FC<SwitchProps> = ({ changed, on, disabled, label }): JSX.E
           checked={enabled}
           onChange={() => setEnabled(!enabled)}
           disabled={disabled}
-          className={classNames(enabled ? bgOn : bgOff, switchTheme.bg)}
+          className={classNames(enabled ? backgroundOn : backgroundOff, switchTheme.background)}
         >
           <span
             className={classNames(

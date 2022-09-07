@@ -13,8 +13,8 @@ const meta = {
       },
       action: 'clicked',
     },
-    style: {
-      options: ['primary', 'secondary', 'white', 'red'],
+    variant: {
+      options: ['primary', 'secondary', 'light', 'danger'],
     },
   },
   parameters: {
@@ -29,32 +29,32 @@ const Template = (args) => <Button {...args}>Button</Button>
 export const Primary = Template.bind({})
 Primary.args = {
   size: 'base',
-  style: 'primary',
+  variant: 'primary',
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
   ...Primary.args,
-  style: 'secondary',
+  variant: 'secondary',
 }
 
-export const Rounded = Template.bind({})
-Rounded.args = {
+export const FullRounded = Template.bind({})
+FullRounded.args = {
   ...Primary.args,
-  style: 'primary',
-  fullRounded: true,
+  variant: 'primary',
+  rounded: 'full',
 }
 
-export const White = Template.bind({})
-White.args = {
+export const Light = Template.bind({})
+Light.args = {
   ...Primary.args,
-  style: 'white',
+  variant: 'light',
 }
 
-export const Red = Template.bind({})
-Red.args = {
+export const Danger = Template.bind({})
+Danger.args = {
   ...Primary.args,
-  style: 'red',
+  variant: 'danger',
 }
 
 const TemplateWithChild = (args) => (
@@ -67,7 +67,7 @@ const TemplateWithChild = (args) => (
 export const WithIcon = TemplateWithChild.bind({})
 WithIcon.args = {
   size: 'base',
-  style: 'primary',
+  variant: 'primary',
 }
 
 const TemplateWithChildRight = (args) => (
@@ -80,5 +80,5 @@ const TemplateWithChildRight = (args) => (
 export const WithIconRight = TemplateWithChildRight.bind({})
 WithIconRight.args = {
   size: 'base',
-  style: 'primary',
+  variant: 'primary',
 }

@@ -1,6 +1,6 @@
 /**
  *
- * The actions wrapper of the modal
+ * The content wrapper for the modal.
  * 
  * @param children - The content of the modal content.
  *
@@ -15,11 +15,11 @@ export type ModalContentProps = PropsWithChildren<Omit<ComponentProps<'div'>, 'c
 
 export const ModalContent: FC<ModalContentProps> = ({children, ...props}) => {
 
-  const {modal: modalTheme} = useTheme().theme
+  const {modal: theme} = useTheme().theme
   const cleanProps = cleanClassName(props)
 
   return (
-    <div className={modalTheme.content.base} {...cleanProps}>
+    <div className={theme.content} {...cleanProps}>
       {children}
     </div>
   )
