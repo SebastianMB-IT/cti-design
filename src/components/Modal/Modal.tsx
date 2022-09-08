@@ -4,6 +4,8 @@
  *
  * @param show - The parameter to show the modal.
  * @param size - The size of the modal.
+ * @param focus - The size of the modal.
+ * @param onClose - The size of the modal.
  *
  */
 
