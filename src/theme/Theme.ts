@@ -33,7 +33,7 @@ const theme = {
     }
   },
   input: {
-    base: 'block w-full text-gray-600 placeholder-gray-300  bg-white mt-1',
+    base: 'block w-full text-gray-600 placeholder-gray-300  bg-white mt-1 focus:z-10',
     label: 'text-sm font-medium text-gray-700',
     helper: 'mt-2 text-sm text-gray-700 text-red-600',
     size: {

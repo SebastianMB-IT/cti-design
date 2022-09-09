@@ -66,7 +66,7 @@ WithError.args = {
 export const ErrorWithHelper = Template.bind({})
 ErrorWithHelper.args = {
   ...WithLabel.args,
-  helper: 'This is the helper text',
+  helper: 'This is a helper text',
   error: true,
 }
 
@@ -75,7 +75,7 @@ ErrorHelperWithIcon.args = {
   ...WithLabel.args,
   icon: MdError,
   iconRight: true,
-  helper: 'This is the helper text',
+  helper: 'This is a helper text',
   error: true,
 }
 
