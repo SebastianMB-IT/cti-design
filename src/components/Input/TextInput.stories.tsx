@@ -9,6 +9,10 @@ const meta = {
   component: TextInput,
   argTypes: {
     onIconClick: {
+      table: {
+        category: 'Events',
+        subcategory: 'Icon Events',
+      },
       action: 'icon clicked',
     },
     squared: {
@@ -37,6 +41,13 @@ Large.args = {
   size: 'large',
 };
 
+export const FullRounded = Template.bind({});
+FullRounded.args = {
+  placeholder: 'Input placeholder',
+  name: 'test',
+  rounded: 'full'
+};
+
 export const WithLabel = Template.bind({});
 WithLabel.args = {
   label: 'Input label',
@@ -54,7 +65,7 @@ export const WithTrailingIcon = Template.bind({});
 WithTrailingIcon.args = {
   ...WithLabel.args,
   icon: HiMail,
-  iconRight: true,
+  trailingIcon: true,
 };
 
 export const WithError = Template.bind({});
@@ -74,7 +85,7 @@ export const ErrorHelperWithIcon = Template.bind({});
 ErrorHelperWithIcon.args = {
   ...WithLabel.args,
   icon: MdError,
-  iconRight: true,
+  trailingIcon: true,
   helper: 'This is a helper text',
   error: true,
 };
@@ -82,5 +93,5 @@ ErrorHelperWithIcon.args = {
 export const Squared = Template.bind({});
 Squared.args = {
   ...WithLabel.args,
-  squared: 'right',
+  squared: 'top',
 };

@@ -12,6 +12,12 @@ const theme = {
       base: 'rounded-md',
       full: 'rounded-full'
     },
+    squared: {
+      right: 'rounded-tr-none rounded-br-none',
+      top: 'rounded-tr-none rounded-tl-none',
+      left: 'rounded-tl-none rounded-bl-none',
+      bottom: 'rounded-bl-none rounded-br-none',
+    },
     sizes: {
       base: 'px-3.5 py-2',
       large: 'px-4 py-2.5',
@@ -33,7 +39,7 @@ const theme = {
     }
   },
   input: {
-    base: 'block w-full relative placeholder-gray-500 text-gray-900  bg-white mt-1 focus:z-10',
+    base: 'block w-full relative placeholder-gray-500 text-gray-900  bg-white mt-1 focus:z-9',
     label: 'text-sm font-medium text-gray-700',
     helper: 'mt-2 text-sm text-gray-700 text-red-600',
     size: {
@@ -57,12 +63,15 @@ const theme = {
       },
     },
     rounded: {
-      all: 'rounded-md',
-      right: 'rounded-tl-md rounded-bl-md',
-      top: 'rounded-br-md rounded-bl-md',
-      left: 'rounded-tr-md rounded-br-md',
-      bottom: 'rounded-tl-md rounded-tr-md',
+      base: 'rounded-md',
+      full: 'rounded-full'
     },
+    squared: {
+      right: 'rounded-tr-none rounded-br-none',
+      top: 'rounded-tr-none rounded-tl-none',
+      left: 'rounded-tl-none rounded-bl-none',
+      bottom: 'rounded-bl-none rounded-br-none',
+    }
   },
   modal: {
     panel: {

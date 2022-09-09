@@ -13,6 +13,10 @@ const meta = {
       },
       action: 'clicked',
     },
+    squared: {
+      control: 'select',
+      options: ['left', 'right', 'top', 'bottom'],
+    },
     variant: {
       options: ['primary', 'secondary', 'light', 'danger'],
     },
@@ -81,4 +85,23 @@ export const WithIconRight = TemplateWithChildRight.bind({})
 WithIconRight.args = {
   size: 'base',
   variant: 'primary',
+}
+
+const TemplateButtonIcon = (args) => (
+  <Button {...args}>
+    <HiRefresh className='h-4 w-4' />
+  </Button>
+)
+
+export const ButtonIcon = TemplateButtonIcon.bind({})
+ButtonIcon.args = {
+  size: 'base',
+  variant: 'light'
+}
+
+export const ButtonIconSquared = TemplateButtonIcon.bind({})
+ButtonIconSquared.args = {
+  size: 'base',
+  variant: 'primary',
+  squared: 'right'
 }

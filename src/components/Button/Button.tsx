@@ -1,4 +1,5 @@
 /**
+ * 
  * It can be used to render a label with an icon.
  *
  * @param children - The children/s to render.
@@ -19,6 +20,7 @@ export interface ButtonProps
   variant?: 'primary' | 'secondary' | 'light' | 'danger';
   disabled?: boolean;
   rounded?: 'base' | 'full';
+  squared?: 'left' | 'right' | 'top' | 'bottom';
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps> (({
@@ -27,6 +29,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps> (({
   variant = 'primary',
   disabled,
   rounded = 'base',
+  squared,
   ...props
 }, ref): JSX.Element => {
   const { button: theme } = useTheme().theme;
@@ -36,6 +39,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps> (({
         theme.base,
         theme[variant],
         rounded === 'full' ? theme.rounded.full : theme.rounded.base,
+        squared ? theme.squared[squared] : '',
         (typeof size === 'undefined' || size === 'base') &&
           theme.sizes.base,
         size === 'large' && theme.sizes.large

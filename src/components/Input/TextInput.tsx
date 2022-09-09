@@ -25,10 +25,11 @@ export interface TextInputProps
   > {
   label?: string;
   icon?: FC<ComponentProps<'svg'>>;
-  iconRight?: boolean;
+  trailingIcon?: boolean;
   error?: boolean;
   helper?: string;
   size?: 'base' | 'large';
+  rounded?: 'base' | 'full';
   squared?: 'left' | 'right' | 'top' | 'bottom';
   onIconClick?: () => void;
 }
@@ -39,11 +40,12 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       label,
       placeholder,
       icon: Icon,
-      iconRight,
+      trailingIcon,
       type = 'text',
       error,
       helper,
       size,
+      rounded,
       squared,
       onIconClick,
       ...props
@@ -60,7 +62,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             <div
               className={classNames(
                 theme.icon.base,
-                iconRight ? theme.icon.right : theme.icon.left
+                trailingIcon ? theme.icon.right : theme.icon.left
               )}
             >
               <Icon
@@ -80,10 +82,11 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             placeholder={placeholder}
             className={classNames(
               theme.base,
-              squared ? theme.rounded[squared] : theme.rounded.all,
+              rounded === 'full' ? theme.rounded.full : theme.rounded.base,
+              squared ? theme.squared[squared] : '',
               size && size === 'large' ? theme.size.large : theme.size.base,
               !error ? theme.colors.gray : theme.colors.error,
-              Icon && !iconRight && 'pl-10'
+              Icon && !trailingIcon && 'pl-10'
             )}
             {...cleanProps}
             ref={ref}
