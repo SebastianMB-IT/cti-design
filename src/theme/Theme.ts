@@ -39,7 +39,7 @@ const theme = {
     }
   },
   input: {
-    base: 'block w-full relative placeholder-gray-500 text-gray-900  bg-white mt-1 focus:z-9',
+    base: 'block w-full relative placeholder-gray-500 text-gray-900  bg-white mt-1 focus:z-10',
     label: 'text-sm font-medium text-gray-700',
     helper: 'mt-2 text-sm text-gray-700 text-red-600',
     size: {
@@ -52,7 +52,7 @@ const theme = {
         'border-red-500 text-red-900 focus:border-red-500 focus:ring-red-500 placeholder-red-700',
     },
     icon: {
-      base: 'absolute flex items-center z-10',
+      base: 'absolute flex items-center z-20',
       gray: 'text-gray-500',
       red: 'text-red-600',
       left: 'inset-y-0 left-0 pl-3',
