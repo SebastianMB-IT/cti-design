@@ -1,6 +1,6 @@
 const theme = {
   button: {
-    base: 'flex content-center items-center justify-center font-medium tracking-wide transition-colors duration-200 transform focus:outline-none focus:ring-2 focus:ring-offset-2 gap-2',
+    base: 'flex content-center items-center justify-center font-medium tracking-wide transition-colors duration-200 transform focus:outline-none focus:ring-2 focus:ring-offset-2 gap-2 focus:z-20',
     primary:
       'focus:ring-indigo-500 bg-indigo-600 hover:bg-indigo-700 text-white border border-transparent',
     secondary:
@@ -10,7 +10,8 @@ const theme = {
     danger: 'focus:ring-red-500 bg-red-600 hover:bg-red-700 text-white border border-transparent',
     rounded: {
       base: 'rounded-md',
-      full: 'rounded-full'
+      full: 'rounded-full',
+      none: '',
     },
     squared: {
       right: 'rounded-tr-none rounded-br-none',

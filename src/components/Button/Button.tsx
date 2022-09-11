@@ -19,7 +19,7 @@ export interface ButtonProps
   size?: 'base' | 'large';
   variant?: 'primary' | 'secondary' | 'light' | 'danger';
   disabled?: boolean;
-  rounded?: 'base' | 'full';
+  rounded?: 'base' | 'full' | 'none';
   squared?: 'left' | 'right' | 'top' | 'bottom';
 }
 
@@ -38,7 +38,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps> (({
       className={classNames(
         theme.base,
         theme[variant],
-        rounded === 'full' ? theme.rounded.full : theme.rounded.base,
+        rounded ? theme.rounded[rounded] : theme.rounded.base,
         squared ? theme.squared[squared] : '',
         (typeof size === 'undefined' || size === 'base') &&
           theme.sizes.base,

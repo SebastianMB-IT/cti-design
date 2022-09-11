@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 import { TextInput, TextInputProps } from '../..';
-import { HiMail } from 'react-icons/hi';
+import { HiMail, HiEyeOff, HiEye } from 'react-icons/hi';
 import { MdError } from 'react-icons/md';
 
 const meta = {
@@ -31,27 +31,27 @@ const Template: Story<TextInputProps> = (args) => <TextInput {...args} />;
 
 export const Base = Template.bind({});
 Base.args = {
-  placeholder: 'Input placeholder',
+  placeholder: 'This is a placeholder',
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  placeholder: 'Input placeholder',
+  placeholder: 'This is a placeholder',
   name: 'test',
   size: 'large',
 };
 
 export const FullRounded = Template.bind({});
 FullRounded.args = {
-  placeholder: 'Input placeholder',
+  placeholder: 'This is a placeholder',
   name: 'test',
   rounded: 'full'
 };
 
 export const WithLabel = Template.bind({});
 WithLabel.args = {
-  label: 'Input label',
-  placeholder: 'Input placeholder',
+  label: 'This is a label',
+  placeholder: 'This is a placeholder',
   name: 'test',
 };
 
@@ -95,3 +95,27 @@ Squared.args = {
   ...WithLabel.args,
   squared: 'top',
 };
+
+
+export const InputGroup: Story = () => {
+
+  const [pwdVisible, setPwdVisible] = useState(false)
+
+  return (
+    <div className='flex flex-col -space-y-1.5'>
+      <TextInput placeholder='Enter your username' name='username' squared='bottom' />
+
+      <div className='pt-px'>
+        <TextInput
+          placeholder='Enter your password'
+          name='password'
+          squared='top'
+          type={pwdVisible ? 'text' : 'password'}
+          icon={pwdVisible ? HiEyeOff : HiEye}
+          onIconClick={() => setPwdVisible(!pwdVisible)}
+          trailingIcon={true}
+        />
+      </div>
+    </div>
+  )
+}
