@@ -40,7 +40,7 @@ const theme = {
     }
   },
   input: {
-    base: 'block w-full relative placeholder-gray-500 text-gray-900  bg-white mt-1 focus:z-10',
+    base: 'block w-full relative placeholder-gray-500 text-gray-900  bg-white focus:z-10',
     label: 'text-sm font-medium text-gray-700',
     helper: 'mt-2 text-sm text-gray-700 text-red-600',
     size: {
@@ -104,6 +104,50 @@ const theme = {
       large: '',
     },
   },
+  badge: {
+    base: 'font-semibold mr-2 flex justify-center items-center w-fit gap-2',
+    dot: 'w-1.5 h-1.5 rounded-full',
+    available: {
+      base: 'bg-green-100 text-green-900',
+      dot: 'bg-green-700'
+    },
+    dnd: {
+      base: 'bg-gray-100 text-gray-900',
+      dot: 'bg-gray-700'
+    },
+    voicemail: {
+      base: 'bg-orange-100 text-orange-900',
+      dot: 'bg-orange-700'
+    },
+    cellphone: {
+      base: 'bg-purple-100 text-purple-900',
+      dot: 'bg-purple-700'
+    },
+    callforward: {
+      base: 'bg-yellow-100 text-yellow-900',
+      dot: 'bg-yellow-700'
+    },
+    busy: {
+      base: 'bg-red-100 text-red-900',
+      dot: 'bg-red-700'
+    },
+    incoming: {
+      base: 'bg-blue-100 text-blue-900',
+      dot: 'bg-blue-700'
+    },
+    offline: {
+      base: 'bg-gray-100 text-gray-600',
+      dot: 'bg-gray-500'
+    },
+    rounded: {
+      base: 'rounded-md',
+      full: 'rounded-full'
+    },
+    sizes: {
+      base: 'px-2.5 py-0.5 text-xs',
+      large: 'px-2.5 py-0.5 text-base'
+    }
+  }
 };
 
 export default theme;

@@ -55,7 +55,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     const cleanProps = cleanClassName(props);
     const { input: theme } = useTheme().theme;
     return (
-      <div className='text-left'>
+      <div className='text-left w-full'>
         {label && <label className={theme.label}>{label}</label>}
         <div className="relative">
           {Icon && (
@@ -82,6 +82,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             placeholder={placeholder}
             className={classNames(
               theme.base,
+              label && 'mt-1',
               rounded === 'full' ? theme.rounded.full : theme.rounded.base,
               squared ? theme.squared[squared] : '',
               size && size === 'large' ? theme.size.large : theme.size.base,

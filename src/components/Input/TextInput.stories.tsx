@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { KeyboardEvent, useState } from 'react';
 import { Meta, Story } from '@storybook/react';
-import { TextInput, TextInputProps } from '../..';
-import { HiMail, HiEyeOff, HiEye } from 'react-icons/hi';
+import { TextInput, TextInputProps, Button } from '../..';
+import {
+  HiMail,
+  HiEyeOff,
+  HiEye,
+  HiViewGridAdd,
+  HiSearch,
+} from 'react-icons/hi';
 import { MdError } from 'react-icons/md';
 
 const meta = {
@@ -45,7 +51,7 @@ export const FullRounded = Template.bind({});
 FullRounded.args = {
   placeholder: 'This is a placeholder',
   name: 'test',
-  rounded: 'full'
+  rounded: 'full',
 };
 
 export const WithLabel = Template.bind({});
@@ -96,20 +102,22 @@ Squared.args = {
   squared: 'top',
 };
 
-
 export const InputGroup: Story = () => {
-
-  const [pwdVisible, setPwdVisible] = useState(false)
+  const [pwdVisible, setPwdVisible] = useState(false);
 
   return (
-    <div className='flex flex-col -space-y-1.5'>
-      <TextInput placeholder='Enter your username' name='username' squared='bottom' />
+    <div className="flex flex-col -space-y-1.5">
+      <TextInput
+        placeholder="Enter your username"
+        name="username"
+        squared="bottom"
+      />
 
-      <div className='pt-px'>
+      <div className="pt-px">
         <TextInput
-          placeholder='Enter your password'
-          name='password'
-          squared='top'
+          placeholder="Enter your password"
+          name="password"
+          squared="top"
           type={pwdVisible ? 'text' : 'password'}
           icon={pwdVisible ? HiEyeOff : HiEye}
           onIconClick={() => setPwdVisible(!pwdVisible)}
@@ -117,5 +125,39 @@ export const InputGroup: Story = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
+
+export const WithButtonGroup: Story = () => {
+  const [inputPlaceholder, setInputPlaceholder] = useState('Search');
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      console.log('enter value:', event.target.value);
+    }
+  };
+
+  return (
+    <div className="flex -space-x-px w-full">
+      <Button
+        variant="light"
+        squared="right"
+        onClick={() => setInputPlaceholder('Search')}
+      >
+        <HiSearch className="text-gray-500 h-5 w-5" />
+      </Button>
+      <Button
+        variant="light"
+        rounded="none"
+        onClick={() => setInputPlaceholder('Dial')}
+      >
+        <HiViewGridAdd className="text-gray-500 h-5 w-5" />
+      </Button>
+      <TextInput
+        placeholder={inputPlaceholder}
+        name="search"
+        squared="left"
+        onKeyDown={handleKeyDown}
+      />
+    </div>
+  );
+};

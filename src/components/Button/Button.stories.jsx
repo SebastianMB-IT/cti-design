@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../..';
-import { HiPlay, HiStop, HiRewind } from 'react-icons/hi';
+import { HiPlay, HiStop, HiRewind, HiRefresh } from 'react-icons/hi';
 
 const meta = {
   title: 'Components/Button',
