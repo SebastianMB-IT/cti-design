@@ -34,7 +34,7 @@ export const Badge: FC<BadgeProps> = ({
   dot,
   hide,
 }): JSX.Element => {
-  const { badge: theme } = useTheme().theme;
+  const { badge: theme, status } = useTheme().theme;
 
   return (
     <>
@@ -43,12 +43,12 @@ export const Badge: FC<BadgeProps> = ({
           className={classNames(
             theme.base,
             rounded ? theme.rounded[rounded] : theme.rounded.base,
-            variant && theme[variant].base,
+            variant && status[variant].badge.base,
             size ? theme.sizes[size] : theme.sizes.base
           )}
         >
           {dot && (
-            <div className={classNames(theme.dot, theme[variant].dot)}></div>
+            <div className={classNames(theme.dot, status[variant].badge.dot)}></div>
           )}
           {children}
         </span>

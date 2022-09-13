@@ -7,7 +7,8 @@ const theme = {
       'focus:ring-indigo-500 bg-indigo-200 hover:bg-indigo-300 text-indigo-600 border border-transparent',
     light:
       'border border-gray-300 focus:ring-indigo-500 bg-white hover:bg-gray-100 text-gray-700',
-    danger: 'focus:ring-red-500 bg-red-600 hover:bg-red-700 text-white border border-transparent',
+    danger:
+      'focus:ring-red-500 bg-red-600 hover:bg-red-700 text-white border border-transparent',
     rounded: {
       base: 'rounded-md',
       full: 'rounded-full',
@@ -37,7 +38,7 @@ const theme = {
       translate: 'translate-x-1',
       gray: 'bg-gray-200',
       indigo: 'bg-indigo-200',
-    }
+    },
   },
   input: {
     base: 'block w-full relative placeholder-gray-500 text-gray-900  bg-white focus:z-10',
@@ -65,89 +66,156 @@ const theme = {
     },
     rounded: {
       base: 'rounded-md',
-      full: 'rounded-full'
+      full: 'rounded-full',
     },
     squared: {
       right: 'rounded-tr-none rounded-br-none',
       top: 'rounded-tr-none rounded-tl-none',
       left: 'rounded-tl-none rounded-bl-none',
       bottom: 'rounded-bl-none rounded-br-none',
-    }
+    },
   },
   modal: {
     panel: {
       base: 'relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg',
       transition: {
-        enter:"ease-out duration-300",
-        enterFrom:"opacity-0",
-        enterTo:"opacity-100",
-        leave:"ease-in duration-200",
-        leaveFrom:"opacity-100",
-        leaveTo:"opacity-0"
-      }
+        enter: 'ease-out duration-300',
+        enterFrom: 'opacity-0',
+        enterTo: 'opacity-100',
+        leave: 'ease-in duration-200',
+        leaveFrom: 'opacity-100',
+        leaveTo: 'opacity-0',
+      },
     },
     content: 'bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 sm:flex sm:items-start',
     background: {
       base: 'fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity',
       transition: {
-        enter:"ease-out duration-300",
-        enterFrom:"opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
-        enterTo:"opacity-100 translate-y-0 sm:scale-100",
-        leave:"ease-in duration-200",
-        leaveFrom:"opacity-100 translate-y-0 sm:scale-100",
-        leaveTo:"opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-      }
+        enter: 'ease-out duration-300',
+        enterFrom: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
+        enterTo: 'opacity-100 translate-y-0 sm:scale-100',
+        leave: 'ease-in duration-200',
+        leaveFrom: 'opacity-100 translate-y-0 sm:scale-100',
+        leaveTo: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
+      },
     },
-    actions: 'bg-gray-50 px-4 py-3 flex flex-col sm:flex-row-reverse  sm:px-6 gap-3',
+    actions:
+      'bg-gray-50 px-4 py-3 flex flex-col sm:flex-row-reverse  sm:px-6 gap-3',
     sizes: {
       base: '',
       large: '',
     },
   },
+  status: {
+    available: {
+      badge: {
+        base: 'bg-green-100 text-green-900',
+        dot: 'bg-green-700',
+      },
+      avatar: {
+        dot: 'bg-green-500',
+      },
+    },
+    dnd: {
+      badge: {
+        base: 'bg-gray-100 text-gray-900',
+        dot: 'bg-gray-700',
+      },
+      avatar: {
+        dot: 'bg-gray-900',
+      },
+    },
+    voicemail: {
+      badge: {
+        base: 'bg-orange-100 text-orange-900',
+        dot: 'bg-orange-700',
+      },
+      avatar: {
+        dot: 'bg-orange-500',
+      },
+    },
+    cellphone: {
+      badge: {
+        base: 'bg-purple-100 text-purple-900',
+        dot: 'bg-purple-700',
+      },
+      avatar: {
+        dot: 'bg-purple-500',
+      },
+    },
+    callforward: {
+      badge: {
+        base: 'bg-yellow-100 text-yellow-900',
+        dot: 'bg-yellow-700',
+      },
+      avatar: {
+        dot: 'bg-yellow-500',
+      },
+    },
+    busy: {
+      badge: {
+        base: 'bg-red-100 text-red-900',
+        dot: 'bg-red-700',
+      },
+      avatar: {
+        dot: 'bg-red-500',
+      },
+    },
+    incoming: {
+      badge: {
+        base: 'bg-blue-100 text-blue-900',
+        dot: 'bg-blue-700',
+      },
+      avatar: {
+        dot: 'bg-blue-500',
+      },
+    },
+    offline: {
+      badge: {
+        base: 'bg-gray-100 text-gray-600',
+        dot: 'bg-gray-500',
+      },
+      avatar: {
+        dot: 'bg-gray-500',
+      },
+    },
+  },
   badge: {
     base: 'font-semibold mr-2 flex justify-center items-center w-fit gap-2',
     dot: 'w-1.5 h-1.5 rounded-full',
-    available: {
-      base: 'bg-green-100 text-green-900',
-      dot: 'bg-green-700'
-    },
-    dnd: {
-      base: 'bg-gray-100 text-gray-900',
-      dot: 'bg-gray-700'
-    },
-    voicemail: {
-      base: 'bg-orange-100 text-orange-900',
-      dot: 'bg-orange-700'
-    },
-    cellphone: {
-      base: 'bg-purple-100 text-purple-900',
-      dot: 'bg-purple-700'
-    },
-    callforward: {
-      base: 'bg-yellow-100 text-yellow-900',
-      dot: 'bg-yellow-700'
-    },
-    busy: {
-      base: 'bg-red-100 text-red-900',
-      dot: 'bg-red-700'
-    },
-    incoming: {
-      base: 'bg-blue-100 text-blue-900',
-      dot: 'bg-blue-700'
-    },
-    offline: {
-      base: 'bg-gray-100 text-gray-600',
-      dot: 'bg-gray-500'
-    },
     rounded: {
       base: 'rounded-md',
-      full: 'rounded-full'
+      full: 'rounded-full',
     },
     sizes: {
       base: 'px-2.5 py-0.5 text-xs',
-      large: 'px-2.5 py-0.5 text-base'
-    }
-  }
+      large: 'px-2.5 py-0.5 text-base',
+    },
+  },
+  avatar: {
+    base: 'h-12 w-12 relative',
+    group: 'flex -space-x-4 w-fit',
+    reverse: 'flex-row-reverse space-x-reverse',
+    image: 'w-full h-full',
+    bordered: 'border-2 border-white',
+    initials: {
+      base: 'text-white w-full h-full flex justify-center items-center text-xl',
+      background: 'bg-gray-500'
+    },
+    placeholder: {
+      base: '',
+      background: 'bg-gray-100'
+    },
+    status: {
+      base: 'w-4 h-4 rounded-full absolute border-2 border-white',
+      circular: '-right-1 top-9',
+      rounded: '-right-2 top-10',
+    },
+    rounded: {
+      base: 'rounded-md',
+      full: 'rounded-full',
+    },
+  },
 };
 
 export default theme;
