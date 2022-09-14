@@ -16,10 +16,10 @@ export type ModalContentProps = PropsWithChildren<Omit<ComponentProps<'div'>, 'c
 export const ModalContent: FC<ModalContentProps> = ({children, ...props}) => {
 
   const {modal: theme} = useTheme().theme
-  const cleanProps = cleanClassName(props)
+  const theirProps = cleanClassName(props)
 
   return (
-    <div className={theme.content} {...cleanProps}>
+    <div className={theme.content} {...theirProps}>
       {children}
     </div>
   )

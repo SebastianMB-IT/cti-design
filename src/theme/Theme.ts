@@ -200,11 +200,11 @@ const theme = {
     bordered: 'border-2 border-white',
     initials: {
       base: 'text-white w-full h-full flex justify-center items-center text-xl',
-      background: 'bg-gray-500'
+      background: 'bg-gray-500',
     },
     placeholder: {
       base: '',
-      background: 'bg-gray-100'
+      background: 'bg-gray-100',
     },
     status: {
       base: 'w-4 h-4 rounded-full absolute border-2 border-white',
@@ -214,6 +214,32 @@ const theme = {
     rounded: {
       base: 'rounded-md',
       full: 'rounded-full',
+    },
+  },
+  dropdown: {
+    base: 'relative inline-block text-left',
+    item: {
+      base: 'block px-4 py-2 text-sm flex items-center gap-3 mt-1 mb-1',
+      light: 'text-gray-700',
+      active: 'bg-gray-100 text-gray-900',
+      icon: 'h-5 w-5 text-gray-400 flex'
+    },
+    items: {
+      base: 'absolute z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none',
+      position: {
+        right: 'left-0',
+        left: 'right-0'
+      },
+      divider: 'divide-y divide-gray-100',
+      header: 'block px-4 py-3 text-sm',
+      transition: {
+        enter: 'transition ease-out duration-100',
+        enterFrom: 'transform opacity-0 scale-95',
+        enterTo: 'transform opacity-100 scale-100',
+        leave: 'transition ease-in duration-75',
+        leaveFrom: 'transform opacity-100 scale-100',
+        leaveTo: 'transform opacity-0 scale-95',
+      },
     },
   },
 };
