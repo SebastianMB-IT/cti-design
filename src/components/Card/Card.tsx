@@ -5,22 +5,21 @@
  * @param {string} backgroundColor The background color of the Card.
  */
 
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { ComponentProps, FC} from 'react'
 
-export const Card = ({ content, backgroundColor }) => {
+export interface CardProps extends Omit<ComponentProps<'div'>, 'className'> {
+  content?: string;
+  backgroundColor?: string;
+}
+
+export const Card: FC<CardProps> = ({ children }) => {
   return (
     <div>
       <a
         className='block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'
-        style={backgroundColor && { backgroundColor }}
       >
-        {content}
+        {children}
       </a>
     </div>
   )
-}
-Card.propTypes = {
-  content: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string,
 }
