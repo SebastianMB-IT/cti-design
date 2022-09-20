@@ -40,7 +40,10 @@
   },
   "name": "cti-design",
   "author": "SebastianMB",
-  "repository": "git@github.com:SebastianMB-IT/cti-design.git",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/SebastianMB-IT/cti-design.git"
+  },
   "module": "dist/cti-design.esm.js",
   "size-limit": [
     {
