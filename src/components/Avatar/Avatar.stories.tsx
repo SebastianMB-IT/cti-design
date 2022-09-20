@@ -5,7 +5,21 @@ import { Story, Meta } from '@storybook/react';
 const meta = {
   title: 'Components/Avatar',
   component: Avatar,
-  argTypes: {},
+  argTypes: {
+    status: {
+      options: [
+        'available',
+        'dnd',
+        'voicemail',
+        'cellphone',
+        'callforward',
+        'busy',
+        'incoming',
+        'offline',
+      ],
+      type: 'select',
+    },
+  },
   parameters: {
     controls: { expanded: true },
   },
