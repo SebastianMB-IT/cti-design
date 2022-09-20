@@ -5,7 +5,7 @@ CTI Design is a Components Library made for creating consistent, usable and acce
 - Based on: [Tailwind](https://tailwindcss.com/)
 - Figma design file: [CTI Design Figma](https://www.figma.com/community/file/1149758596138467720)
 - Built on Storybook: [Storybook](https://storybook.js.org/)
-- Repo: [Github](git@github.com:SebastianMB-IT/cti-design.git)
+- Repo: [Github](https://github.com/SebastianMB-IT/cti-design)
 
 **ANALYSIS STEPS**
 

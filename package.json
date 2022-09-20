@@ -39,7 +39,8 @@
     "trailingComma": "es5"
   },
   "name": "cti-design",
-  "author": "Sebastian",
+  "author": "SebastianMB",
+  "repository": "git@github.com:SebastianMB-IT/cti-design.git",
   "module": "dist/cti-design.esm.js",
   "size-limit": [
     {
