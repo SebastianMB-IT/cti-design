@@ -183,7 +183,7 @@ const theme = {
         dot: 'bg-red-500',
       },
       card: {
-        border: 'border-yellow-500'
+        border: 'border-red-500'
       }
     },
     incoming: {
