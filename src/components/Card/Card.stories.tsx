@@ -1,25 +1,193 @@
-import React from 'react'
-import { Card, CardProps } from '../..'
-import { Story, Meta } from '@storybook/react'
+import React from 'react';
+import { Card, CardProps, Avatar, Badge, Button, Dropdown } from '../..';
+import { Story, Meta } from '@storybook/react';
+import { HiDotsVertical, HiPhone, HiChat } from 'react-icons/hi';
+import { RiArrowLeftRightFill } from 'react-icons/ri';
+import theme from '../../theme/Theme';
 
 const meta = {
   title: 'Components/Card',
   component: Card,
   argTypes: {
-    onClick: { action: 'clicked' },
-    backgroundColor: { control: 'color' },
-    enabled: {},
+    status: {
+      options: Object.keys(theme.status),
+      type: 'select',
+    },
   },
   parameters: {
     controls: { expanded: true },
   },
-}
+};
 
-export default meta as Meta
+export default meta as Meta;
 
-const Template: Story<CardProps> = (args) => <Card {...args} />
+const Template: Story<CardProps> = (args) => <Card {...args} />;
 
-export const Base = Template.bind({})
+const dropdownItems = (
+  <>
+    <Dropdown.Item icon={RiArrowLeftRightFill} centered={true}>
+      Transfer
+    </Dropdown.Item>
+    <Dropdown.Item icon={HiChat} centered={true}>
+      Chat
+    </Dropdown.Item>
+  </>
+);
+
+export const Base = Template.bind({});
 Base.args = {
-  children: (<div>Card</div>)
-}
+  children: (
+    <>
+      {/* Header */}
+      <Card.Header>
+        {/* Left */}
+        <div className="flex flex-col gap-0.5">
+          <div className="flex gap-3.5 items-center">
+            <span className="">Stephanie Liverani</span>
+            <Badge variant="available" rounded="full" size="base">
+              Available
+            </Badge>
+          </div>
+          <span className="text-gray-600">203</span>
+        </div>
+        {/* Right */}
+        <Avatar src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
+      </Card.Header>
+    </>
+  ),
+};
+
+export const WithStatus = Template.bind({});
+WithStatus.args = {
+  children: (
+    <>
+      {/* Header */}
+      <Card.Header>
+        {/* Left */}
+        <div className="flex flex-col gap-0.5">
+          <div className="flex gap-3.5 items-center">
+            <span className="">Stephanie Liverani</span>
+            <Badge variant="available" rounded="full" size="base">
+              Available
+            </Badge>
+          </div>
+          <span className="text-gray-600">203</span>
+        </div>
+        {/* Right */}
+        <Avatar src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
+      </Card.Header>
+    </>
+  ),
+  status: 'available',
+};
+
+export const WithActions = Template.bind({});
+WithActions.args = {
+  children: (
+    <>
+      {/* Header */}
+      <Card.Header>
+        {/* Left */}
+        <div className="flex flex-col gap-0.5">
+          <div className="flex gap-3.5 items-center">
+            <span className="">Stephanie Liverani</span>
+            <Badge variant="available" rounded="full" size="base">
+              Available
+            </Badge>
+          </div>
+          <span className="text-gray-600">203</span>
+        </div>
+        {/* Right */}
+        <Avatar src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
+      </Card.Header>
+      {/* Actions */}
+      <Card.Actions>
+        <Dropdown items={dropdownItems} size="full">
+          <div className="flex justify-center w-full h-full">
+            <Button
+              variant="transparent"
+              size="full"
+              rounded="large"
+              squared="tright"
+            >
+              <HiDotsVertical className="h-4 w-4 text-gray-400" />
+              Actions
+            </Button>
+          </div>
+        </Dropdown>
+        <div className="flex justify-center w-full">
+          <Button
+            variant="transparent"
+            size="full"
+            rounded="large"
+            squared="tleft"
+          >
+            <HiPhone className="h-4 w-4 text-gray-400" />
+            Call
+          </Button>
+        </div>
+      </Card.Actions>
+    </>
+  ),
+};
+
+export const ActionsWithContent = Template.bind({});
+ActionsWithContent.args = {
+  children: (
+    <>
+      {/* Header */}
+      <Card.Header>
+        {/* Left */}
+        <div className="flex flex-col gap-0.5">
+          <div className="flex gap-3.5 items-center">
+            <span className="">Stephanie Liverani</span>
+            <Badge variant="available" rounded="full" size="base">
+              Available
+            </Badge>
+          </div>
+          <span className="text-gray-600">203</span>
+        </div>
+        {/* Right */}
+        <Avatar src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
+      </Card.Header>
+      {/* Content */}
+      <Card.Content>
+        <div className="flex justify-between">
+          <span className="text-gray-600">Wonka Industries Inc.</span>
+          <span className="text-gray-600">Outbound</span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-600">202-555-0150</span>
+          <span className="text-gray-600">00:01:02</span>
+        </div>
+      </Card.Content>
+      {/* Actions */}
+      <Card.Actions>
+        <Dropdown items={dropdownItems} size="full">
+          <div className="flex justify-center w-full h-full">
+            <Button
+              variant="transparent"
+              size="full"
+              rounded="large"
+              squared="tright"
+            >
+              <HiDotsVertical className="h-4 w-4 text-gray-400" />
+              Actions
+            </Button>
+          </div>
+        </Dropdown>
+        <div className="flex justify-center w-full">
+          <Button
+            variant="transparent"
+            size="full"
+            rounded="large"
+            squared="tleft"
+          >
+            <HiPhone className="h-4 w-4 text-gray-400" />
+            Call
+          </Button>
+        </div>
+      </Card.Actions>
+    </>
+  ),
+};

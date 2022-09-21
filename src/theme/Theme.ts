@@ -1,28 +1,35 @@
 const theme = {
   button: {
-    base: 'flex content-center items-center justify-center font-medium tracking-wide transition-colors duration-200 transform focus:outline-none focus:ring-2 focus:ring-offset-2 gap-2 focus:z-20',
+    base: 'flex content-center items-center justify-center font-medium tracking-wide transition-colors duration-200 transform focus:outline-none focus:ring-2 gap-2 focus:z-20',
     primary:
-      'focus:ring-indigo-500 bg-indigo-600 hover:bg-indigo-700 text-white border border-transparent',
+      'focus:ring-indigo-500 bg-indigo-600 hover:bg-indigo-700 text-white border border-transparent focus:ring-offset-2',
     secondary:
-      'focus:ring-indigo-500 bg-indigo-200 hover:bg-indigo-300 text-indigo-600 border border-transparent',
+      'focus:ring-indigo-500 bg-indigo-200 hover:bg-indigo-300 text-indigo-600 border border-transparent focus:ring-offset-2',
     light:
-      'border border-gray-300 focus:ring-indigo-500 bg-white hover:bg-gray-100 text-gray-700',
+      'border border-gray-300 focus:ring-indigo-500 bg-white hover:bg-gray-100 text-gray-700 focus:ring-offset-2',
     danger:
-      'focus:ring-red-500 bg-red-600 hover:bg-red-700 text-white border border-transparent',
+      'focus:ring-red-500 bg-red-600 hover:bg-red-700 text-white border border-transparent focus:ring-offset-2',
+    transparent:
+      'focus:ring-indigo-500 ring-inset focus:outline-none hover:bg-gray-100 text-gray-700 border border-transparent drop-shadow-none',
     rounded: {
       base: 'rounded-md',
+      large: 'rounded-lg',
+      extra: 'rounded-xl',
       full: 'rounded-full',
-      none: '',
+      none: 'rounded-none',
     },
     squared: {
       right: 'rounded-tr-none rounded-br-none',
       top: 'rounded-tr-none rounded-tl-none',
       left: 'rounded-tl-none rounded-bl-none',
       bottom: 'rounded-bl-none rounded-br-none',
+      tright: 'rounded-tr-none rounded-tl-none rounded-br-none',
+      tleft: 'rounded-tl-none rounded-tr-none rounded-bl-none',
     },
     sizes: {
       base: 'px-3.5 py-2',
       large: 'px-4 py-2.5',
+      full: 'w-full h-full',
     },
   },
   switch: {
@@ -115,6 +122,9 @@ const theme = {
       avatar: {
         dot: 'bg-green-500',
       },
+      card: {
+        border: 'border-green-500'
+      }
     },
     dnd: {
       badge: {
@@ -124,6 +134,9 @@ const theme = {
       avatar: {
         dot: 'bg-gray-900',
       },
+      card: {
+        border: 'border-gray-500'
+      }
     },
     voicemail: {
       badge: {
@@ -133,6 +146,9 @@ const theme = {
       avatar: {
         dot: 'bg-orange-500',
       },
+      card: {
+        border: 'border-orange-500'
+      }
     },
     cellphone: {
       badge: {
@@ -142,6 +158,9 @@ const theme = {
       avatar: {
         dot: 'bg-purple-500',
       },
+      card: {
+        border: 'border-purple-500'
+      }
     },
     callforward: {
       badge: {
@@ -151,6 +170,9 @@ const theme = {
       avatar: {
         dot: 'bg-yellow-500',
       },
+      card: {
+        border: 'border-yellow-500'
+      }
     },
     busy: {
       badge: {
@@ -160,6 +182,9 @@ const theme = {
       avatar: {
         dot: 'bg-red-500',
       },
+      card: {
+        border: 'border-yellow-500'
+      }
     },
     incoming: {
       badge: {
@@ -169,6 +194,9 @@ const theme = {
       avatar: {
         dot: 'bg-blue-500',
       },
+      card: {
+        border: 'border-blue-500'
+      }
     },
     offline: {
       badge: {
@@ -178,17 +206,20 @@ const theme = {
       avatar: {
         dot: 'bg-gray-500',
       },
+      card: {
+        border: 'border-gray-500'
+      }
     },
   },
   badge: {
-    base: 'font-semibold mr-2 flex justify-center items-center w-fit gap-2',
+    base: 'font-medium mr-2 flex justify-center items-center w-fit gap-2',
     dot: 'w-1.5 h-1.5 rounded-full',
     rounded: {
       base: 'rounded-md',
       full: 'rounded-full',
     },
     sizes: {
-      base: 'px-2.5 py-0.5 text-xs',
+      base: 'px-2.5 py-0.5 text-sm',
       large: 'px-2.5 py-0.5 text-base',
     },
   },
@@ -218,17 +249,21 @@ const theme = {
   },
   dropdown: {
     base: 'relative inline-block text-left',
+    size: {
+      full: 'w-full h-full'
+    },
     item: {
       base: 'block px-4 py-2 text-sm flex items-center gap-3 mt-1 mb-1',
       light: 'text-gray-700',
       active: 'bg-gray-100 text-gray-900',
-      icon: 'h-5 w-5 text-gray-400 flex'
+      icon: 'h-5 w-5 text-gray-400 flex',
+      centered: 'justify-center'
     },
     items: {
       base: 'absolute z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none',
       position: {
         right: 'left-0',
-        left: 'right-0'
+        left: 'right-0',
       },
       divider: 'divide-y divide-gray-100',
       header: 'block px-4 py-3 text-sm',
@@ -242,6 +277,22 @@ const theme = {
       },
     },
   },
+  card: {
+    base: 'block max-w-md bg-white rounded-lg border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700',
+    wrapper: {
+      border: 'border-t-2',
+      rounded: 'rounded-lg'
+    },
+    header: {
+      base: 'flex justify-between p-7'
+    },
+    content: {
+      base: 'flex flex-col p-7 gap-1 border-t border-gray-200'
+    },
+    actions: {
+      base: 'grid grid-cols-2 divide-x divider-gray-200 h-14 border-t border-gray-200 z-30 rounded-b-xl'
+    }
+  }
 };
 
 export default theme;

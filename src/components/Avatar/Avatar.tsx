@@ -1,4 +1,5 @@
 /**
+ * 
  * It can be used to render a Avatar or User's profile image.
  *
  * @param rounded - Indicate the radius of the avatar.
@@ -10,21 +11,14 @@ import React, { ComponentProps, FC, ReactNode } from 'react';
 import { useTheme } from '../../theme/Context';
 import classNames from 'classnames';
 import { AvatarGroup, AvatarGroupProps as GroupProps } from './AvatarGroup';
+import type { StatusTypes } from '../../theme/Types'
 
 export type AvatarGroupProps = GroupProps
 
 export interface AvatarProps
   extends Omit<ComponentProps<'div'>, 'className' | 'placeholder'> {
   rounded?: 'base' | 'full';
-  status?:
-    | 'available'
-    | 'dnd'
-    | 'voicemail'
-    | 'cellphone'
-    | 'callforward'
-    | 'busy'
-    | 'incoming'
-    | 'offline';
+  status?: StatusTypes;
   src?: string;
   initials?: string;
   placeholder?: ReactNode;

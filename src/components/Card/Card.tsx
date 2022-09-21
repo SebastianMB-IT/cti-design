@@ -1,25 +1,48 @@
 /**
+ * 
  * It can be used to render a Card.
  *
- * @param {string} content The content to render.
- * @param {string} backgroundColor The background color of the Card.
  */
 
-import React, { ComponentProps, FC} from 'react'
+import React, { ComponentProps, FC } from 'react';
+import { useTheme } from '../../theme/Context';
+import classNames from 'classnames';
+import { CardActions } from './CardActions';
+import { CardContent } from './CardContent';
+import { CardHeader } from './CardHeader';
+import type { StatusTypes } from '../../theme/Types'
 
 export interface CardProps extends Omit<ComponentProps<'div'>, 'className'> {
   content?: string;
   backgroundColor?: string;
+  status?: StatusTypes;
 }
 
-export const Card: FC<CardProps> = ({ children }) => {
+const CardComponent: FC<CardProps> = ({ children, status }) => {
+
+  const { card: theme, status: statuses} = useTheme().theme
+
   return (
-    <div>
-      <a
-        className='block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'
-      >
+    <div className={classNames(
+      theme.base
+    )}>
+      <div className={classNames(
+        theme.wrapper.rounded,
+        status && theme.wrapper.border,
+        status && statuses[status].card.border,
+      )}>
         {children}
-      </a>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+CardHeader.displayName = 'Card.Header'
+CardContent.displayName = 'Card.Content'
+CardActions.displayName = 'Card.Actions'
+
+export const Card = Object.assign(CardComponent, {
+  Header: CardHeader,
+  Content: CardContent,
+  Actions: CardActions,
+})

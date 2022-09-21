@@ -18,7 +18,7 @@ const meta = {
       options: ['left', 'right', 'top', 'bottom'],
     },
     variant: {
-      options: ['primary', 'secondary', 'light', 'danger'],
+      options: ['primary', 'secondary', 'light', 'danger', 'transparent'],
     },
   },
   parameters: {

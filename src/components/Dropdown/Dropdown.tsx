@@ -10,20 +10,31 @@ export interface DropdownProps
   items: ReactNode;
   divider?: boolean;
   position?: 'left' | 'right';
+  size?: 'full';
 }
 
-const DropdownComponent: FC<DropdownProps> = ({ children, items, divider, position }) => {
+const DropdownComponent: FC<DropdownProps> = ({
+  children,
+  items,
+  divider,
+  position,
+  size,
+}) => {
   const { dropdown: theme } = useTheme().theme;
 
   return (
     <Menu as="div" className={theme.base}>
-      <Menu.Button as="div">{children}</Menu.Button>
+      <Menu.Button as="div" className={classNames(size && theme.size[size])}>
+        {children}
+      </Menu.Button>
       <Transition as={Fragment} {...theme.items.transition}>
         <Menu.Items
           className={classNames(
             theme.items.base,
             divider && theme.items.divider,
-            position ? theme.items.position[position] : theme.items.position.right
+            position
+              ? theme.items.position[position]
+              : theme.items.position.right
           )}
         >
           {items}

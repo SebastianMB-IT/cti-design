@@ -8,12 +8,14 @@ export interface DropdownItemProps
   extends Omit<ComponentProps<'div'>, 'className'> {
   onClick?: () => void;
   icon?: FC<ComponentProps<'svg'>>;
+  centered?: boolean;
 }
 
 export const DropdownItem: FC<DropdownItemProps> = ({
   children,
   onClick,
   icon: Icon,
+  centered,
   ...props
 }) => {
   const { dropdown: theme } = useTheme().theme;
@@ -25,7 +27,8 @@ export const DropdownItem: FC<DropdownItemProps> = ({
         <div
           className={classNames(
             theme.item.base,
-            active ? theme.item.active : theme.item.light
+            active ? theme.item.active : theme.item.light,
+            centered && theme.item.centered
           )}
           onClick={onClick}
           {...theirProps}
