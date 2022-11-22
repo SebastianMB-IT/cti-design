@@ -22,7 +22,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/cti.css --minify",
-    "publish": "np"
+    "release": "np"
   },
   "peerDependencies": {
     "react": ">=16"
